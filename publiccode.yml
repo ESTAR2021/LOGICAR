@@ -1,0 +1,67 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+categories:
+  - fleet-management
+description:
+  it:
+    features:
+      - facilità d'uso
+    genericName: Applicazione web prenotazione auto
+    longDescription: |
+      L'applicazione è stata sviluppata per permettere ai dipendenti di
+      un'azienda di indicare  il giorno e l'ora in cui intendono partire e
+      tornare avvalendosi di un'auto per raggiungere una certa destinazione a
+      partire dalla sede di assegnazione, o un'altra sede aziendale a scelta,
+      dove siano indicate presenti auto prenotabili. Una volta inseriti questi
+      dati appare un elenco di possibili auto già prenotate, e con posti
+      disponibili, con la stessa destinazione e con orari di partenza e ritorno
+      non troppo distanti da quelli indicati. Questo per favorire la
+      condivisione di uno stesso viaggio. Qualora non siano presenti viaggi da
+      condividere oppure si indichi, giustificandone il motivo, di non voler
+      usufruire di un viaggio in condivisione, in tal caso apparirebbe l'elenco
+      delle auto eventualmente disponibili presso la sede di partenza.
+      L'applicativo non necessita di un addetto che ne presidi il funzionamento
+      in quanto le conferme alle prenotazioni effettuate vengono generate
+      automaticamente. E' previsto e necessario invece un utente, o più utenti,
+      abilitato/i come  amministratore/i per la gestione del parco auto, ovvero
+      per l'inserimento, con tutti i dati obbligatori e non, e la dismissione
+      delle auto presso le varie sedi aziendali indicandone la possibilità o
+      meno di essere prenotate in base alla loro possibilità o meno di poter
+      effettuare viaggi.     
+    shortDescription: |-
+      Applicazione web per la prenotazione e la gestione delle prenotazioni di
+      auto aziendali 
+developmentStatus: stable
+it:
+  conforme:
+    gdpr: false
+    lineeGuidaDesign: false
+    misureMinimeSicurezza: false
+    modelloInteroperabilita: false
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: false
+    spid: false
+  riuso:
+    codiceIPA: estar
+legal:
+  license: AGPL-3.0-or-later
+localisation:
+  availableLanguages:
+    - it
+  localisationReady: false
+maintenance:
+  contacts:
+    - name: luigi.molinari@estar.toscana.it
+  type: internal
+name: LOGICAR
+platforms:
+  - web
+releaseDate: '2022-01-14'
+softwareType: standalone/web
+url: 'https://github.com/ESTAR2021/LOGICAR'
