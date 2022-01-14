@@ -1,0 +1,117 @@
+<html>
+<head>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/datedropper.js"></script>
+    <script src="../js/timedropper.js"></script>
+    <script src="../js/loginautista.js"></script>
+    <script src="../js/template_prenotazione.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/timedropper.css">
+    <link rel="stylesheet" type="text/css" href="../css/datedropper.css">
+    <link rel="stylesheet" type="text/css" href="../css/video_style.css">
+    <link rel="stylesheet" type="text/css" href="../css/cornerbox.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/step3_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+
+    <style>
+        #modalstep .modal-dialog  {width:75%;}
+    </style>
+
+</head>
+<body>
+<div id='menu'></div>
+
+
+<div class="fullscreen-bg">
+    <video loop muted autoplay poster="../img/booking/dsc0387.jpg" class="fullscreen-bg__video">
+        <source src="../img/video/343019031.mp4" type="video/mp4">
+        <source src="../img/video/343019031.webm" type="video/webm">
+    </video>
+</div>
+    
+<div class="container">
+
+	</div>
+        <div class="col-md-12 " >
+            <div class="col-md-12" id="riepilogo">
+
+              
+                <div>
+                    <!--Riquadro Nessuna presentazione-->
+                    <div class="sfondo_box_auto" >
+                        <div class='row' >
+                            <div class="col-md-2 " ></div>
+                            <div class="col-md-8 titoli" style="text-align: center;" id='titolo_avvisi'>CAMBIO PSW</div>
+                            <div class="col-md-2 " ></div>
+                        </div>
+                    </div>
+                    <!--Primo riquadro di riepilogo-->
+                    <div class="sfondo_box_auto" id='avviso_0' >
+                        <div class='row'>
+                         
+                            <div class="col-md-12" id='testo_avviso_0' >
+                            </div>
+                            
+                        </div>
+                        <div class='row'>
+                            <div class="col-md-6 "  >
+                                <label for="cf">Codice Fiscale</label>
+                            </div>
+                            <div class="col-md-6 "  >
+                                <input id='cf' class='psw' type='text'  >
+                            </div> </div>
+						<div class='row'>
+                        <div class="col-md-6 "  >
+							<label for="psw_vecchia">Vecchia password</label>
+                            </div>
+                        <div class="col-md-6 "  >
+                                <input id='psw_vecchia' class='psw' type='password'  >
+                        </div> </div>
+                            <div class='row'>
+                            <div class="col-md-6 "  >
+                                <label for="psw_nuova">Nuova password</label>
+                            </div>
+                            <div class="col-md-6 "  >
+							<input id='psw_nuova' class='psw' type='password'  ></div> </div>
+                                <div class='row'>
+                            <div class="col-md-6 "  >
+                                <label for="psw_ripeti">Ripeti password</label>
+                            </div>
+                            <div class="col-md-6 "  >
+							<input id='psw_ripeti' class='psw' type='password'  ></div></div>
+                                    <div class='row'>   <div class="col-md-12 "  >
+							<button type="button" id='procedi_cambio' class="btn letto btn-success">CAMBIO PSW</button>
+                            </div>
+                            
+                        </div>
+                        <div class="alert alert-danger" id="errore" hidden>
+                            <strong>Attenzione!</strong> Le password inserite non coincidono
+                        </div>
+                        <div class="alert alert-danger" id="errore_credenziali" hidden>
+                            <strong>Attenzione!</strong> Le vecchia password non è corretta
+                        </div>
+                    </div>
+
+				
+                    
+                    
+                        <div class="clearfix">
+                            <br>
+                        </div>
+                        </ul>
+                    </div>
+                    <ul class="pagination">
+                </div>
+            </div>
+        </div>
+
+
+<!-- Div per finestra modale avanzamento step -->
+<div class="modal fade" id="modalstep" tabindex="-1" role="dialog" aria-labelledby="Cambio psw" aria-hidden="true"></div>
+</body>
+</html>

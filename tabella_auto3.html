@@ -1,0 +1,46 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/form-required.css">
+    <script type="text/javascript" src="js/datahref.jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
+    <style type="text/css" class="init"></style>
+    <script type="text/javascript" src="js/validator.min.js"></script>
+</head>
+<body>
+<div id='tabella_auto_3'>
+
+    <table id="tabella_macchina_3" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    </table>
+</div>
+
+<!-- Div per finestra modale cancellazione -->
+<div class="modal fade" id="confirm-cancparco" tabindex="-1" role="dialog" aria-labelledby="Cancella auto"
+     aria-hidden="true">
+
+</div>
+
+<!-- Div per finestra modale modifica -->
+<div class="modal fade" id="confirm-edit" tabindex="-1" role="dialog" aria-labelledby="Modifica auto"
+     aria-hidden="true">
+
+</div>
+
+<!-- Div per finestra modale inserimento manutenzione -->
+<div class="modal fade" id="inserisci_3" tabindex="-1" role="dialog" aria-labelledby="Inserisci manutenzione"
+     aria-hidden="true">
+
+</div>
+
+<!-- Div per finestra modale riserva auto-->
+<div class="modal fade" id="riserva" tabindex="-1" role="dialog" aria-labelledby="Definisci la riserva dell'auto"
+     aria-hidden="true">
+
+</div>
+
+</body>
+<script type="text/javascript">
+    App.loadJsFile('js/tabella_3.js');
+</script>
+
+</html>

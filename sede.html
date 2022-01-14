@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-sm-10">
+        <div class="well" style="margin-top: 1%; margin-left:20%">
+            <form role="form" id="formSede" name="formSede" data-toggle="validator" class="shake">
+                <div class="row">
+                    <div class="form-group col-sm-12">
+                        <div id="id_sede" class="id_sede" hidden></div>
+                        <div class="id_azienda" id="id_azienda" hidden></div>
+                        <label for="azienda" class="h4">Azienda:</label>
+                        <input disabled name="azienda" id="azienda" class="form-control azienda" required
+                               data-error="Errore, il campo ASL non è valorizzato correttamente"/>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-sm-8">
+                        <label for="tipo" class="h4">Tipo Sede:</label>
+                        <select class="form-control tipo" id="tipo" name="tipo" required>
+                            <option value="POS">Presidio Ospedaliero</option>
+                            <option value="DSS">Distretto Socio Sanitario</option>
+                            <option value="CDI">Centro Direzionale</option>
+                            <option value="ALT">Altro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-8">
+                        <label for="provincia" class="h4">Provincia:</label>
+                        <select class="form-control provincia" id="provincia" name="provincia"
+                                onChange="getComuni(this.value);" required
+                                data-error="Il campo Provincia è obbligatorio"></select>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-sm-8">
+                        <label for="comune" class="h4">Comune:</label>
+                        <select class="form-control comune" id="comune" name="comune" required
+                                data-error="Il campo Comune è obbligatorio"></select>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label for="indirizzo" class="h4">Indirizzo:</label>
+                        <input type="text" min="255" step="1" class="form-control indirizzo" id="indirizzo"
+                               name="indirizzo" placeholder="Via..." required
+                               data-error="Il campo indirizzo è obbligatorio">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Chiudi</button>
+                <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right form-submit"
+                        data-toggle="modal" data-target="#div-modal"></button>
+                <div id="msgSubmit" class="h3 text-center" hidden></div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/validator.min.js"></script>
+<script type="text/javascript">
+    //Carico il gestore dell'inserimento sede
+    App.loadJsFile('js/form-sede.js');
+</script>

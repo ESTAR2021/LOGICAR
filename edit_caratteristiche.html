@@ -1,0 +1,265 @@
+<div id="row_container_mod">
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="well" style="margin-top: 1%; margin-left:20%">
+                <h3>Modifica mezzo</h3>
+                <form role="form" id="automobile_mod_autoparco" data-toggle="validator" class="shake">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="n1" class="h4">Titolo di Proprietà </label>
+                            <input type="radio" class="form-control" id="n1" name="noleggio"
+                                   placeholder="Selezionata per indicarne la proprietà" value="0" required
+                                   data-error="Il campo noleggio è obbligatorio">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="n2" class="h4">Titolo di Noleggio </label>
+                            <input type="radio" class="form-control" id="n2" name="noleggio"
+                                   placeholder="Selezionata per indicarne il noleggio" value="1" required
+                                   data-error="Il campo noleggio è obbligatorio">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="inputmarca" class="h4">Marca: </label>
+                            <input type="text" class="form-control" id="inputmarca" name="marca"
+                                   placeholder="Inserire la marca" style='text-transform:uppercase' disabled>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="inputmodello" class="h4">Modello: </label>
+                            <input type="text" class="form-control" id="inputmodello" name="modello"
+                                   placeholder="Inserire il modello" style='text-transform:uppercase' disabled>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="colore" class="h4">Colore</label>
+                            <input type="text" class="form-control" id="colore" name="colore"
+                                   placeholder="Inserire il colore" 
+                                   style='text-transform:uppercase'>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="targa" class="h4">Targa</label>
+                            <input type="text" class="form-control" id="targa" name="targa"
+                                   placeholder="Inserire la targa" required data-error="Il campo targa è obbligatorio"
+                                   style='text-transform:uppercase'>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="telaio" class="h4">Telaio</label>
+                            <input type="text" class="form-control" id="telaio" name="telaio"
+                                   placeholder="Inserire il telaio" 
+                                   style='text-transform:uppercase'>
+                        </div>
+                        <input type="hidden" class="form-control" id="id_modello" name="id_modello">
+                        <div class="form-group col-sm-6">
+                            <label for="anno_imm" class="h4">Anno immatricolazione</label>
+                            <input type="number" class="form-control" id="anno_imm" name="anno_imm"
+                                   placeholder="Inserire anno immatricolazione" 
+                                   style='text-transform:uppercase'>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="mese_imm" class="h4">Mese immatricolazione</label>
+                            <input type="number" class="form-control" id="mese_imm"
+                                   name="mese_imm" placeholder="Inserire mese immatricolazione" 
+                                   style='text-transform:uppercase'>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="posti" class="h4">Numero posti</label>
+                            <input type="number" min="1" step="1" class="form-control noscroll" id="posti" name="posti"
+                                   placeholder="Inserire numero posti" required
+                                   data-error="Il campo numero posti è obbligatorio e numerico. Devono essere almeno 2"
+                                   style='text-transform:uppercase'>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="peso" class="h4">Peso massimo (in t)</label>
+                            <input type="number" min="0" max="10" step="0.001" class="form-control noscroll" id="peso"
+                                   name="peso" placeholder="Inserire peso massimo" 
+                                   style='text-transform:uppercase'>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="kmlitro" class="h4">Consumo (L/100Km)</label>
+                            <input type="number" min="0" step="0.1" class="form-control noscroll" id="kmlitro"
+                                   name="kmlitro" placeholder="Inserire km al litro"
+                                   style='text-transform:uppercase'>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="assi" class="h4">Numero assi</label>
+                            <input type="number" min="0" max="5" step="1" class="form-control noscroll" id="assi"
+                                   name="assi" placeholder="Inserire numero assi" 
+                                   style='text-transform:uppercase'>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="compatibilita" class="h4">Compatibilità ambientale</label>
+                            <select class="form-control" id="compatibilita" name="compatilibita">
+                                <option value="EURO I">EURO I</option>
+                                <option value="EURO II">EURO II</option>
+                                <option value="EURO III">EURO III</option>
+                                <option value="EURO IV">EURO IV</option>
+                                <option value="EURO V">EURO V</option>
+                                <option value="EURO VI">EURO VI</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6 text-center">
+                            <label for="n3" class="h4">TelePass </label>
+                            <input type="radio" class="form-control" id="n3" name="radiotelepassviacard"
+                                   placeholder="Selezionata per indicare il telepass" value="T"> 
+                        </div>
+                        <div class="form-group col-sm-6 text-center">
+                            <label for="n4" class="h4">ViaCard </label>
+                            <input type="radio" class="form-control" id="n4" name="radiotelepassviacard"
+                                   placeholder="Selezionata per indicare la viacard" value="V">
+                        </div>
+						<div class="form-group col-sm-6">
+                            <label for="TelePass" class="h4">Numero TelePass/ViaCard</label>
+                            <input type="text" class="form-control" id="numero_telepass" name="numero_telepass"
+                                   placeholder="Inserire numero" 
+                                   style='text-transform:uppercase'>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="FuelCard" class="h4">Fuel Card</label>
+                            <input type="text" class="form-control" id="FuelCard" name="FuelCard"
+                                   placeholder="Inserire FuelCard"
+                                   style='text-transform:uppercase'>
+                        </div>					
+						<div class="form-group col-sm-6">
+                            <label for="numero_locale" class="h4">Numero locale</label>
+                            <input type="number" min="0" step="1" class="form-control noscroll" id="numero_locale" name="numero_locale"
+                                   placeholder="Inserire numero locale" 
+                                   style='text-transform:uppercase'>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="destinazione" class="h4">Destinazione</label>
+                            <input type="text" class="form-control" id="destinazione" name="destinazione"
+                                   placeholder="Inserire la destinazione" 
+                                   style='text-transform:uppercase'>
+                        </div>
+										<div class="form-group col-sm-12">
+                        <label for="unita_prelievo" class="h4">Unità di prelievo</label>
+												<br>
+                        <select class="form-control" id="unita_prelievo" name="unita_prelievo" style="width: 100%">
+						<!--							<option value="">Tutte le unita' prelievo</option> -->
+												</select>
+                        <div class="help-block with-errors"></div>
+                    </div>		
+                        <div class="form-group col-sm-4 text-center">
+                            <label for="n5" class="h4">Uso SANITARIO</label>
+                            <input type="radio" class="form-control" id="n5" name="uso"
+                                   placeholder="Selezionata per indicare uso sanitario" value="A" required
+								   data-error="Il campo uso è obbligatorio"> 
+                        </div>
+                        <div class="form-group col-sm-4 text-center">
+                            <label for="n6" class="h4">Uso SOCIALE</label>
+                            <input type="radio" class="form-control" id="n6" name="uso"
+                                   placeholder="Selezionata per indicare uso sociale" value="O" required
+								   data-error="Il campo uso è obbligatorio">
+                        </div>
+                       <div class="form-group col-sm-4 text-center">
+                            <label for="n6" class="h4">Uso AZIENDALE</label>
+                            <input type="radio" class="form-control" id="n7" name="uso"
+                                   placeholder="Selezionata per indicare uso aziendale" value="Z" required
+								   data-error="Il campo uso è obbligatorio">
+                        </div>
+                    <br>
+                    <div class="form-group col-sm-6 text-center">
+                        <label for="n1" class="h4">Prenotabile </label>
+                        <input type="radio" class="form-control" id="siprenotabile" name="prenotabile"
+                               placeholder="Selezionata per indicare se prenotabile" value="1" required
+                                   data-error="Il campo prenotabile è obbligatorio">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-sm-6 text-center">
+                        <label for="n2" class="h4">Non Prenotabile</label>
+                        <input type="radio" class="form-control" id="noprenotabile" name="prenotabile"
+                               placeholder="Selezionata per indicare se non prenotabile" value="0" required
+                                   data-error="Il campo prenotabile è obbligatorio">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <br>
+                    <div class="form-group col-sm-6 text-center">
+                        <label for="n1" class="h4">Esente bollo</label>
+                        <input type="radio" class="form-control" id="siesentebollo" name="esentebollo"
+                               placeholder="Selezionata per indicarne se prenotabile" value="1" required
+                                   data-error="Il campo esente bollo è obbligatorio">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-sm-6 text-center">
+                        <label for="n2" class="h4">Non esente bollo</label>
+                        <input type="radio" class="form-control" id="noesentebollo" name="esentebollo"
+                               placeholder="Selezionata per indicarne se non prenotabile" value="0" required
+                                   data-error="Il campo esente bollo è obbligatorio">
+                        <div class="help-block with-errors"></div>
+                    </div>							
+						<br>
+						
+                        <div class="form-group col-sm-12">
+                            <label for="inputnote" class="h4 ">Note</label>
+                            <textarea id="inputnote" name="inputnote" class="form-control" rows="5"
+                                      placeholder="Inserire le note opzionali"
+                                      style='text-transform:uppercase'></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <!--Sezione per la selezione della sede-->
+                    <div class="row">
+                        <div class="form-group col-sm-8">
+                            <div id="id_sede" hidden></div>
+							<div id="id_unita_prelievo" hidden></div>
+                            <div class="id_azienda" id="id_azienda" hidden></div>
+                            <label for="azienda" class="h4">Azienda:</label>
+                            <input disabled name="azienda" id="azienda" class="form-control azienda" required
+                                   data-error="Errore, il campo ASL non è valorizzato correttamente"/>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-8">
+                            <label for="tipoSede" class="h4">Sede di deposito</label>
+                            <select class="form-control" id="tipoSede" name="tipoSede"
+                                    onChange="" required>
+                                <option value="" selected>Scegli una tipologia</option>
+                                <option value="POS">Presidio Ospedaliero</option>
+                                <option value="DSS">Distretto Socio Sanitario</option>
+                                <option value="CDI">Centro Direzionale</option>
+                                <option value="ALT">Altro</option>
+                            </select>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="provincia" class="h4">Provincia</label>
+                            <!-- <div id="azienda_sel" type="hidden"></div>-->
+                            <select class="form-control" id="provincia" name="provincia"
+                                    onChange=""></select>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="comune" class="h4">Comune</label>
+                            <!--<div id="provincia_sel" type="hidden"></div>-->
+                            <select class="form-control" id="comune" name="comune" required
+                                    data-error="Il campo comune è obbligatorio"
+                                    onChange=""></select>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="indirizzo" class="h4">Indirizzo sede</label>
+                            <select class="form-control" id="indirizzo" name="indirizzo" placeholder="Indirizzo Sede"
+                                    onchange="" required
+                                    data-error="Il campo indirizzo sede è obbligatorio"
+                                    style='text-transform:uppercase'></select>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!--Fine Sezione della sede-->
+                    </div>
+                    <button type="button" id="form-del" class="btn btn-default btn-lg" data-dismiss="modal">Chiudi
+                    </button>
+                    <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Modifica auto in
+                        autoparco
+                    </button>
+                    <div id="msgparcoSubmit" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/validator.min.js"></script>
+<script type="text/javascript">
+    App.loadJsFile('js/form-modificaauto_autoparco.js');
+</script>

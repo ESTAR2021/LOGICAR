@@ -1,0 +1,108 @@
+<html>
+<head>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/datedropper.js"></script>
+    <script src="../js/timedropper.js"></script>
+	<script src="../js/home.js"></script>
+    <script src="../js/template_prenotazione.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/timedropper.css">
+    <link rel="stylesheet" type="text/css" href="../css/datedropper.css">
+    <link rel="stylesheet" type="text/css" href="../css/video_style.css">
+    <link rel="stylesheet" type="text/css" href="../css/cornerbox.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/step3_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+
+    <style>
+        #modalstep .modal-dialog  {width:75%;}
+    </style>
+<meta charset="UTF-8">
+</head>
+<body>
+<div id='menu'></div>
+
+
+<div class="fullscreen-bg">
+    <video loop muted autoplay poster="../img/booking/dsc0387.jpg" class="fullscreen-bg__video">
+        <source src="../img/video/343019031.mp4" type="video/mp4">
+        <source src="../img/video/343019031.webm" type="video/webm">
+    </video>
+</div>
+    
+<div class="container">
+<div class="loader">
+	</div>
+        <div class="col-md-12 " >
+            <div class="col-md-12" id="riepilogo">
+            
+                <div>
+                    <!--Riquadro Nessuna presentazione-->
+                    <!--<div class="sfondo_box_auto" id='nessuna_prenotazione' >
+                        <div class='row operatore'>
+                            <div class="col-md-2 " ></div>
+                            <div class="col-md-8 titoli" style="text-align: justify;">BENVENUTO<br>
+							Attraverso questo portale potrai
+							prenotare un'auto aziendale, condividere il viaggio con colleghi di lavoro e verificare lo stato delle tue prenotazioni.<br><br>
+							Clicca sul menù in  alto a sinistra per navigare tra le varie sezioni.</div>
+						</div>
+						<div class='row admin' >
+                            <div class="col-md-2 " ></div>
+							 <div class="col-md-8 titoli" style="text-align: justify;">BENVENUTO nel pannello amministrativo.
+								<br><br>
+							Clicca sul menù in  alto a sinistra per navigare tra le varie sezioni.</div>
+                            <div class="col-md-2 " ></div>
+                        </div>
+
+                    </div>-->
+                    <div class="sfondo_box_auto" id='nessuna_prenotazione' >
+                        <div class='row operatore'>
+                            <div class="col-md-2 " ></div>
+                            <div class="col-md-8" style="text-align: justify;">
+
+                                <p class="font_benvenuto">Benvenuto</p>
+
+                                <img src="../img/img_home.png" class="ombra_immagine">
+                                <div class="clearfix"><br><br></div>
+                                <p style="font-size: medium">Attraverso questo portale potrai
+                                prenotare un'automobile aziendale, condividere il viaggio con colleghi di lavoro e verificare lo stato delle tue prenotazioni.</p>
+
+
+                            <div class="clearfix"><br></div>
+
+                            <div class="col-md-12 bottone_prenota clearfix" style="text-align: center; ">
+                                <a href="../booking/step1.html"><h3>Prenota un'automobile</h3></a>
+                            </div>
+
+                            <div class="clearfix"><br></div>
+                            <div class="clearfix"><br></div>
+
+                                <p style="font-size: medium; font-style: italic;">Oppure clicca sul <strong>menù in  alto a sinistra</strong> per navigare tra le varie sezioni.</p></div>
+                        </div>
+                        <div class='row admin' >
+                            <div class="col-md-2 " ></div>
+                            <div class="col-md-8" style="text-align: justify;">
+                                <p class="font_benvenuto">Benvenuto nel pannello amministratore</p>
+
+                                <img src="../img/amministrativo.jpg" class="ombra_immagine">
+                                <div class="clearfix"><br><br></div>
+                                <p style="font-size: medium; font-style: italic;">Clicca sul <strong>menù in  alto a sinistra</strong> per navigare tra le varie sezioni.</p>
+                            </div>
+                            <div class="col-md-2 " ></div>
+                        </div>
+
+                    </div>
+                
+			</div>
+		</div>
+</div>
+</div>
+
+<!-- Div per finestra modale avanzamento step -->
+<div class="modal fade" id="modalstep" tabindex="-1" role="dialog" aria-labelledby="Prenotazione auto" aria-hidden="true"></div>
+</body>
+</html>

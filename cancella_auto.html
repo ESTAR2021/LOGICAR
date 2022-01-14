@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>..::Estar Toscana - Dismissione da autoparco::..</title>
+ <!--    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+ <!--    <meta charset="utf-8"> -->
+	
+<!--     <meta http-equiv="content-type" content="text/html; charset=utf-8" /> -->
+<!-- 		<link rel="stylesheet" href="css/form-required.css"> -->
+	<link rel="stylesheet" href="css/jquery.datetimepicker.css">
+	<script src="js/jquery.datetimepicker.full.js"></script>
+	<script type="text/javascript" src="js/dataoraita.js"></script>
+</head>
+<body>
+<div id="row_container_mod">
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="well" style="margin-top: 1%; margin-left:20%">
+                <h3>Dismissione mezzo</h3>
+                <form role="form" id="automobile_canc_autoparco" data-toggle="validator" class="shake">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="inputmarca" class="h4">Marca: </label>
+                            <input type="text" class="form-control" id="inputmarca" name="marca"
+                                   placeholder="Inserire la marca" style='text-transform:uppercase' disabled>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="inputmodello" class="h4">Modello: </label>
+                            <input type="text" class="form-control" id="inputmodello" name="modello"
+                                   placeholder="Inserire il modello" style='text-transform:uppercase' disabled>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="targa" class="h4">Targa</label>
+                            <input type="text" class="form-control" id="targa" name="targa"
+                                   placeholder="Inserire la targa" required data-error="Il campo targa è obbligatorio"
+                                   style='text-transform:uppercase' disabled>
+                            <div class="help-block with-errors"></div>
+                        </div>
+						<input type="hidden" class="form-control" id="id_parco" name="id_parco">
+                        <div class="form-group col-sm-6">
+                            <label for="motivo" class="h4">Motivo dismissione</label>
+                            <select class="form-control" id="motivo" name="motivo">
+                                <option selected>Rottamazione</option>
+                                <option>Vendita</option>
+                            </select>
+                        </div>
+						<br>
+						<div class="form-group col-sm-6">
+							<label for="giorno_dismissione" class="h4">Data dismissione</label>
+							<input type="text" class="some_class form-control" value="" id="giorno_dismissione" required data-error="Il campo è obbligatorio"/>
+							<div class="help-block with-errors"></div>
+						</div>
+						
+                        <div class="form-group col-sm-12">
+                            <label for="note_dismissione" class="h4 ">Note</label>
+                            <textarea id="note_dismissione" name="note_dismissione" class="form-control" rows="5"
+                                      placeholder="Inserire le note opzionali"
+                                      style='text-transform:uppercase'></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="form-del" class="btn btn-default btn-lg" data-dismiss="modal">Chiudi
+                    </button>
+                    <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Dismetti auto da autoparco
+                    </button>
+                    <div id="msgparcoSubmit" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/validator.min.js"></script>
+<script type="text/javascript">
+    App.loadJsFile('js/form-cancellaauto_autoparco.js');
+</script>

@@ -1,0 +1,242 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/form-required.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.min.css">
+	<script type="text/javascript" src="js/application.js"></script>
+
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
+	<!-- === -->
+    <script type="text/javascript">
+        $(document).on('click', '#logout', function () {
+            $.ajax({
+                type: 'GET',
+                url: 'php/logoutautista.php',
+                success: function (data) {
+                    location.href = 'login.html';
+                }
+            });
+        }).on('click', '#scheletro', function () {
+          location.href = 'scheletro.html';
+        }).on('click', '.cerca', function () {
+          location.href = 'scadenzario.html';
+        });
+
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><img src="img/logo.png" id="scheletro"></li>
+		
+		<li><a href="#" id="nominativo-loggato"></a></li>
+				
+        <li>
+          <a href="./booking/home.html">Torna alla prenotazione</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestione autoparco <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="scheletro.html"><img src="img/garage.png" /> Gestione auto azienda</a></li>
+		    <li><a href="persone.html"><img src="img/uomo.png" /> Gestione dipendenti</a></li>
+          </ul>
+        </li>
+
+      </ul>
+ 
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#" id="logout">Esci</a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<nav class="navbar navbar-default" id="barrazone">
+	<div class="container-fluid">
+		<!-- Trigger the modal with a button -->
+		<!-- il bottone è stato commentatato percé la funzionalità di scelta zone al momento non è necessaria, in caso di richiesta di riattivazione basta togliere il commento seguente
+		-->
+
+		<button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#sceltaZoneModale">Scelta zone</button>
+
+		<div id="zonescelte"></div>
+	</div>
+</nav>
+
+<div id='divider'></div>
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">HELP</h4>
+      </div>
+      <div class="modal-body">
+        <!-- Per l'help desk contattare il seguente numero di telefono:
+        0586.22.3718 -->
+				<br>
+        <iframe width='100%' style="min-height:650px " src="manualeautoparco.pdf"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ======= -->
+
+<!-- Modal selezione zone -->
+<div id="sceltaZoneModale" class="modal fade" role="dialog" data-backdrop="static">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+        <h4 class="modal-title">Scelta zone</h4>
+      </div>
+      <div class="modal-body">
+        <form id="formZone" name="formZone">
+			<div id="checkboxes" name="checkboxes">
+			</div>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button id="btnSelezionaTutto" type="button" class="btn btn-primary btn-sm"> seleziona tuttto</button>
+        <button id="btnDeselezionaTutto" type="button" class="btn btn-primary btn-sm">deseleziona tutto</button>
+		<!--
+        <button id="btn2" type="button" class="btn btn-primary btn-sm">btn2 visualizza</button>
+		-->
+        <button id="chiudimodalezone" type="button" class="btn btn-success" data-dismiss="modal">Chiudi</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============= -->
+<script type="text/javascript">
+//setInterval("alert('Mr.Webmaster')",3000);
+//---
+var vs = []; //vettore delle zone selezionate
+//---
+$(document).ready(function(){
+	//---
+	//scrive il nominativo utente loggato
+	$.get("php/get_nominativo_utente.php", function(data, status){
+		$("#nominativo-loggato").html(data);
+    });
+	//---
+	//visualizza/nasconde la barra della scelta zone
+	$.get("php/get_zone_utente.php", function(data, status){
+		$("#zoneutente").html(data);
+		if(data=='')
+		{
+			$("#barrazone").hide();
+		}
+		else
+		{
+			$("#barrazone").show();
+		}		
+    });
+	//---
+	//scrive le zone selezionate dall'utente
+	$.get("php/get_zoneselezionate_options.php", function(data, status){
+		$("#checkboxes").html(data);
+    });
+	//---
+	$.get("php/get_zoneselezionate.php", function(data, status){
+		vs = data;
+    });
+	//---
+	$.get("php/get_zoneselezionate_descrizione.php", function(data, status){
+		$("#zonescelte").html(data);
+    });
+	//---
+});
+//---
+//funzione che egstisce il cambio zone
+function cambiaZone()
+{
+//console.log(vs);
+//alert('vs2='+vs);
+//alert('lunghezza='+vs.length);
+	$.ajax({
+		url:"php/cambia_zone_selezionate.php",
+		method:"POST",
+		data: {
+			//zoneselezionate: $("#zoneutente").val().toString(),
+			zone: vs.toString()
+		},
+		success: function(response){
+			//alert(response);
+			location.reload();
+		},
+		error: function(){
+			//alert("error "+xhr.responseText);
+			//alert(response);
+		}
+    });
+}
+//---
+//seleziona tutto
+$("#btnSelezionaTutto").click(function(){
+	vs = [];
+	$('#checkboxes input').each(function(){
+		$(this).prop('checked',true);
+		vs.push($(this).attr('name'));
+	});
+	console.log(vs);
+});
+//---
+//deseleziona tutto
+$("#btnDeselezionaTutto").click(function(){
+	vs = [];
+	$('#checkboxes input').each(function() {
+		$(this).prop('checked',false);
+	});
+	console.log(vs);
+});
+//---
+//$("#checkboxes input").click( function(){
+$("#checkboxes").click(function(){
+    console.log('hai cliccato su checkbox');
+	console.log(vs);
+});
+//---
+//quando viene chiusa la modale zone richiama la pagina per rieseguire le query
+$('#chiudimodalezone').click(function(){
+	//costruisce il vettore delle zone scelte
+	vs = [];
+	$('#checkboxes input:checked').each(function(){
+		vs.push($(this).attr('name'));
+	});
+	console.log(vs);
+	//comunica al db le zone scelte
+	cambiaZone();	
+    //location.reload();
+});
+//---
+</script>
+</body>
+</html>

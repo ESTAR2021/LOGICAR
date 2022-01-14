@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>..::Estar Toscana - Gestione autoparco::..</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="css/form-required.css">
+	<link rel="stylesheet" type="text/css" href="lib/datetimepicker/jquery.datetimepicker.css"/>
+	<!--<script type="text/javascript" src="js/autoparco.js"></script>-->
+		<script src="lib/datetimepicker/jquery.js"></script>
+</head>
+<body>
+<div id="row_container_mod">
+
+<div class="row">
+<div class="col-sm-10">
+    <div class="well" style="margin-top: 1%; margin-left:20%">
+    <h3>Riserva auto in autoparco</h3>
+    <form role="form" id="automobile_riserva" data-toggle="validator" class="shake">
+        <div class="row">
+			<div>
+				<label for="da" class="h4">Da</label>
+				<input type="text" id="dateTimeDA" required data-error="Il campo data DA è obbligatorio"/>
+                <div class="help-block with-errors"></div>
+            </div>
+			
+			<div>
+				<label for="da" class="h4">A</label>
+				<input type="text" id="dateTimeA" required data-error="Il campo data DA è obbligatorio"/>
+                <div class="help-block with-errors"></div>
+            </div>
+			<div class="form-group col-sm-6">
+				<label for="servizio" class="h4">Servizio:</label>
+					<select class="form-control" id="servizio" name="servizio" disabled>
+						<option>ASSISTENZA DOMICILIARE</option>
+						<option>TRASPORTO SANGUE</option>
+						<option>TRASPORTO ORGANI</option>
+					</select>
+				</div>
+				
+			<div class="form-group col-sm-6">
+				<label for="marca" class="h4">Marca: </label>
+				<input type="text" class="form-control" id="inputmarca" name="marca" placeholder="Inserire la marca" style='text-transform:uppercase' readonly="readonly">
+           
+			</div>
+            <div class="form-group col-sm-6">
+                <label for="modello" class="h4">Modello: </label>
+               	<input type="text" class="form-control" id="inputmodello" name="modello" placeholder="Inserire il modello" style='text-transform:uppercase' readonly="readonly">
+ 
+                <div class="help-block with-errors"></div>
+            </div>
+			<div class="form-group col-sm-6">
+                <label for="colore" class="h4">Colore</label>
+                <input type="text" class="form-control" id="colore" name="colore" placeholder="Inserire il colore" required data-error="Il campo colore è obbligatorio" style='text-transform:uppercase' readonly="readonly">
+                <div class="help-block with-errors"></div>
+            </div>
+			<div class="form-group col-sm-6">
+                <label for="potenza" class="h4">Targa</label>
+                <input type="text" class="form-control" id="targa" name="targa" placeholder="Inserire la targa" required data-error="Il campo targa è obbligatorio" style='text-transform:uppercase' readonly="readonly">
+                <div class="help-block with-errors"></div>
+            </div>
+			<div class="form-group col-sm-6">
+                <label for="telaio" class="h4">Telaio</label>
+               <input type="text" class="form-control" id="telaio" name="telaio" placeholder="Inserire il telaio" required data-error="Il campo telaio è obbligatorio" style='text-transform:uppercase' readonly="readonly">
+           		   <div class="help-block with-errors"></div>
+            </div>
+			 <input type="hidden" class="form-control" id="id_modello" name="id_modello" >
+			   <div class="form-group col-sm-6">
+				<label for="azienda" class="h4">Azienda:</label>
+				  <select class="form-control" id="azienda" name="azienda" disabled>
+					<option>AZIENDA USL TOSCANA CENTRO</option>
+					<option>AZIENDA USL TOSCANA NORD OVEST</option>
+					<option>AZIENDA USL TOSCANA SUD EST</option>
+					<option>AZIENDA OSPEDALIERO UNIVERSITARIA CAREGGI</option>
+					<option>AZIENDA OSPEDALIERO UNIVERSITARIA MEYER</option>
+					<option>AZIENDA OSPEDALIERO UNIVERSITARIA PISANA</option>
+					<option>AZIENDA OSPEDALIERO UNIVERSITARIA SENESE</option>
+					<option>ESTAR TOSCANA</option>
+					<option>ISPO</option>
+					</select>
+				</div>
+
+        </div>
+			
+			<div class="form-group col-sm-6">
+                <label for="posti" class="h4">Numero posti</label>
+                <input type="number" min="2" step="1" class="form-control" id="posti" name="posti" placeholder="Inserire numero posti" required data-error="Il campo numero posti è obbligatorio e numerico. Devono essere almeno 2" style='text-transform:uppercase' readonly="readonly">
+                <div class="help-block with-errors"></div>
+            </div>
+						
+		<div class="form-group col-sm-6">
+                <label for="kmlitro" class="h4">Km al litro</label>
+                <input type="number" min="1" step="1" class="form-control" id="kmlitro" name="kmlitro" placeholder="Inserire km al litro" required data-error="Il campo km al litro è obbligatorio e numerico" style='text-transform:uppercase' readonly="readonly">
+                <div class="help-block with-errors"></div>
+            </div>
+			
+	<div class="form-group col-sm-6">
+                <label for="sede" class="h4">Sede di deposito</label>
+                <input type="text"class="form-control" id="sede" name="sede" placeholder="Inserire la sede (ospedale, centro direzionale, distretto...)" required data-error="Il campo sede è obbligatorio" style='text-transform:uppercase' readonly="readonly">
+                <div class="help-block with-errors"></div>
+            </div>
+				<div class="form-group col-sm-6">
+                <label for="provincia" class="h4">Provincia sede</label>
+				<select class="form-control" id="provincia" name="provincia">
+					<option selected disabled>Provincia sede</option>
+					<option>AREZZO</option>
+					<option>FIRENZE</option>
+					<option>GROSSETO</option>
+					<option>LIVORNO</option>
+					<option>LUCCA</option>
+					<option>MASSA-CARRARA</option>
+					<option>PISA</option>
+					<option>PISTOIA</option>
+					<option>PRATO</option>
+					<option>SIENA</option>
+				</select>
+                <div class="help-block with-errors"></div>
+            </div>	
+			<div class="form-group col-sm-6">
+                <label for="comune" class="h4">Comune sede</label>
+                 <select class="form-control" id="comune" name="comune" required data-error="Il campo comune sede è obbligatorio" disabled>
+				 <option selected disabled>Comune sede</option>
+				 </select>
+				 <div class="help-block with-errors"></div>
+            </div>	
+			
+				<div class="form-group col-sm-6">
+                <label for="indirizzo" class="h4">Indirizzo sede</label>
+                <input type="indirizzo" class="form-control" id="indirizzo" name="indirizzo" placeholder="Inserire indirizzo sede" required data-error="Il campo indirizzo sede è obbligatorio" style='text-transform:uppercase' readonly="readonly">
+                <div class="help-block with-errors"></div>
+            </div>	
+			
+			<div class="form-group col-sm-6">
+                <label for="destinazione" class="h4">Destinazione ed uso</label>
+                <input type="text" class="form-control" id="destinazione" name="destinazione" placeholder="Inserire destinazione ed uso" required data-error="Il campo  destinazione ed uso è obbligatorio" style='text-transform:uppercase' readonly="readonly">
+                <div class="help-block with-errors"></div>
+            </div>
+
+        <div class="form-group">
+            <label for="inputnote" class="h4 ">Note</label>
+            <textarea id="inputnote" name="inputnote" class="form-control" rows="5" placeholder="Inserire le note opzionali" style='text-transform:uppercase' readonly="readonly"></textarea>
+            <div class="help-block with-errors"></div>
+        </div>
+		
+        <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Conferma riserva</button>
+        <div id="msgparcoSubmit" class="h3 text-center hidden"></div>
+        <div class="clearfix"></div>
+    </form>
+    </div>
+</div>
+</div>
+
+
+  </div>
+  </div>
+  </div>
+</body>
+
+  
+    <script type="text/javascript" src="js/validator.min.js"></script>
+    <!--<script type="text/javascript" src="js/form-riserva_auto.js"></script>-->
+
+	<script src="lib/datetimepicker/build/jquery.datetimepicker.full.js"></script>
+	<script>
+		$(function(){
+			$('#dateTimeDA').datetimepicker();
+			$('#dateTimeA').datetimepicker();
+		});
+	</script>
+
+
+</html>

@@ -1,0 +1,33 @@
+{
+    "name": "datahref",
+    "title": "jQuery Data-href plugin",
+    "description": "jQuery plugin that converts all elements with data-href attribute to a clickable areas.",
+    "keywords": [
+        "data", "click", "clickable", "link", "links", "html5", "attribute", "anchor", "tag", "target", "blank", "html5-data", "html5-data-attribute", "data-attribute"
+    ],
+    "version": "0.2.2",
+    "author": {
+        "name": "Jan Blasko",
+        "url": "https://www.lucien144.net"
+    },
+    "maintainers": [
+        {
+            "name": "Jan Blasko",
+            "email": "jan.blasko@goodshape.cz",
+            "url": "http://lucien144.net"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "Apache-2.0",
+            "url": "http://opensource.org/licenses/Apache-2.0"
+        }
+    ],
+    "bugs": "https://github.com/lucien144/datahref-jquery/issues",
+    "homepage": "https://github.com/lucien144/datahref-jquery",
+    "docs": "https://github.com/lucien144/datahref-jquery",
+    "download": "https://github.com/lucien144/datahref-jquery",
+    "dependencies": {
+        "jquery": ">=1.7"
+    }
+}

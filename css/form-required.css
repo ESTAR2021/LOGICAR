@@ -1,0 +1,5 @@
+input[type="radio"]:required {
+  box-shadow: 0  0 5px yellow;	
+}
+
+[required] { background-color:yellow; }

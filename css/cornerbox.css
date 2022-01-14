@@ -1,0 +1,95 @@
+#notifiche{
+    background-image: url("../img/booking/linea.png");
+    width: 1500px;
+    height: 5px;
+	margin-top:5px;
+}
+
+#alert{
+    background-image: url("../img/booking/alert.png");
+    width: 40px;
+    height: 40px;
+	margin-left:120px;
+	
+}
+
+
+
+#rcorners6 {
+	float:left;
+    border-radius: 15px 50px;
+    /*background-image: url("../img/booking/bgbox4.png");*/
+    background-image: url("../img/booking/bgbox4_mod.png");
+    padding: 20px;
+    width: 300px;
+    height: 600px;
+	margin-left:50px;
+	margin-right:70px;
+	margin-top:5px;
+	margin-bottom:15px;
+	}
+
+#rcorners7 {
+	float:left;
+    border-radius: 15px 50px;
+    /*background-image: url("../img/booking/bgbox6.png");*/
+    background-image: url("../img/booking/bgbox6_mod.png");
+    padding: 20px;
+    width: 300px;
+    height: 600px;
+	margin-right:70px;
+	margin-top:5px;
+	margin-bottom:15px;
+	}
+	
+#rcorners8 {
+	float:left;
+    border-radius: 15px 50px;
+    /*background-image: url("../img/booking/bgbox7.png");*/
+    background-image: url("../img/booking/bgbox7_mod.png");
+    padding: 20px;
+    width: 300px;
+    height: 600px;
+	margin-top:5px;
+	margin-bottom:15px;
+	}
+	
+#freccia {
+margin-left: 30%;
+	}
+	
+#freccia_2 {
+margin-left: 60%;
+position: relative;
+  top: -45px;
+	}
+
+#freccia_3 {
+    margin-left: 50%;
+    position: relative;
+    top: -45px;
+
+}
+
+#freccia_3 img{
+    width: 95%;
+
+}
+
+#freccia_back {
+margin-left: 0%;
+	}
+	
+#error_comune{	
+height:30px;
+}
+	
+#boxstep {
+	float:left;
+    background: rgba(234, 234, 234, 0.4);
+	border-radius: 15px 50px;
+    max-width: 1150px;
+    max-height:2650px;
+	margin-left:100px;
+	margin-top:20px;
+	}

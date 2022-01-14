@@ -1,0 +1,96 @@
+<html>
+<head>
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/datedropper.js"></script>
+<script src="js/timedropper.js"></script>
+<script src="js/prenotazione.js"></script>
+<script src="js/template_prenotazione.js"></script>
+
+<link rel="stylesheet" href="css/form-required.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/timedropper.css">
+<link rel="stylesheet" type="text/css" href="css/datedropper.css">
+<link rel="stylesheet" type="text/css" href="css/video_style.css">
+<link rel="stylesheet" type="text/css" href="css/cornerbox.css">
+<link rel="stylesheet" type="text/css" href="css/datedropper.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+<style>
+	#modalstep .modal-dialog  {width:50%;}
+	</style>
+
+</head>
+<body>
+<div id='menu'></div>
+	
+
+   <div class="fullscreen-bg">
+        <video loop muted autoplay poster="img/booking/dsc0387.jpg" class="fullscreen-bg__video">
+            <source src="img/video/343019031.mp4" type="video/mp4">
+            <source src="img/video/343019031.webm" type="video/webm">
+        </video>
+    </div>
+	
+    
+
+	
+	<div id="boxstep">
+<p></p>
+&nbsp;&nbsp;&nbsp;
+<div id="rcorners6"><form class="form-inline">
+<br /><br /><p></p><br /><br /><p></p>
+  <div class="form-group">
+      <label for="giorno">Giorno:</label><br />
+<input type="text" class="form-control" id="departure" placeholder="giorno" />
+<div style="height:30px"></div>
+    <label for="orario">Orario :</label><br />
+<input type="text" class="form-control" id="hour" placeholder="orario" />
+<br /><br /><div id="freccia">
+
+</div>
+ </div>
+ </form>
+ </div>
+
+ <div id="rcorners7"><form class="form-inline">
+<br /><br /><p></p><br /><br /><p></p>
+  <div class="form-group ui-widget">
+    <label for="luogo">Comune:</label><br />
+<input type="text" class="form-control" id="comune" placeholder="comune destinazione" /> 
+<div id="error_comune"></div>
+    <label for="indirizzo">Via/sede:</label><br />
+<input type="text" class="form-control" id="indirizzo" placeholder="indirizzo/sede destinazione" />
+<br /><br />
+<div id="freccia_back"></div>
+<div id="freccia_2"></div>
+ </div>
+ </form>
+ </div>
+ 
+ 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <div id="rcorners8"><form class="form-inline">
+<br /><br /><p></p><br /><br /><p></p>
+  <div class="form-group">
+      <label for="giorno">Giorno:</label><br />
+<input type="text" class="form-control" id="departure_2" placeholder="giorno" />
+<div style="height:30px"></div>
+    <label for="orario">Orario :</label><br />
+<input type="text" class="form-control" id="hour_2" placeholder="orario" />
+<br /><br /><div id="freccia_back_2"></div>
+      <div id="freccia_3"></div>
+ </div>
+ </form>
+ </div>
+</div>
+<!-- Div per finestra modale avanzamento step -->
+<div class="modal fade" id="modalstep" tabindex="-1" role="dialog" aria-labelledby="Prenotazione auto" aria-hidden="true">
+</body>
+<script>$( "#departure" ).dateDropper('it');</script>
+<script>$( "#hour" ).timeDropper();</script>
+<script>$( "#departure_2" ).dateDropper('it');</script>
+<script>$( "#hour_2" ).timeDropper();</script>
+</html>

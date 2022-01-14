@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>..::Estar Toscana - Gestione autoparco::..</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" href="css/form-required.css">
+
+</head>
+<body background="img/asphalt.jpg">
+<div id="row_container">
+
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="well" style="margin-top: 1%; margin-left:20%">
+                <h3>Modifica automezzo</h3>
+                <form role="form" id="automobile_mod" data-toggle="validator" class="shake">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="marcamod" class="h4">Marca: </label>
+                            <input type="text" class="form-control" id="marcamod" name="marca" required
+                                   data-error="Il campo marca è obbligatorio" style='text-transform:uppercase'
+                                   readonly="readonly">
+                            <input type="hidden" id="idauto" name="idauto">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="modellomod" class="h4">Modello:</label>
+                            <input type="text" class="form-control" id="modellomod" name="modello" required
+                                   data-error="Il campo modello è obbligatorio" style='text-transform:uppercase'
+                                   readonly="readonly">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="cilindrata" class="h4">Cilindrata</label>
+                            <input type="number" class="form-control" id="cilindrata" name="cilindrata"
+                                   placeholder="Inserire la cilindrata" required
+                                   data-error="Il campo cilindrata è obbligatorio e numerico"
+                                   style='text-transform:uppercase'>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="potenza" class="h4">Potenza fiscale in Kw</label>
+                            <input type="number" class="form-control" id="potenza" name="potenza"
+                                   placeholder="Inserire la potenza in Kw" required
+                                   data-error="Il campo Kw è obbligatorio e numerico" style='text-transform:uppercase'>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="alimentazione" class="h4">Alimentazione:</label>
+                            <select class="form-control" id="alimentazione" name="alimentazione">
+                                <option>DIESEL</option>
+                                <option>BENZINA</option>
+                                <option>BENZINA - GPL</option>
+                                <option>BENZINA - METANO</option>
+                                <option>ELETTRICA</option>
+                                <option>ELETTRICA - BENZINA</option>
+                            </select>
+                        </div>
+<!--
+                        <div class="form-group col-sm-6">
+                            <label for="anno" class="h4">Anno</label>
+                            <input type="number" min="1980" step="1" class="form-control" id="anno" name="anno"
+                                   placeholder="Inserire l'anno di produzione" required
+                                   data-error="Il campo anno è obbligatorio e numerico"
+                                   style='text-transform:uppercase'>
+                            <div class="help-block with-errors"></div>
+                        </div>
+-->
+
+                    </div>
+                    <div class="form-group">
+                        <label for="note" class="h4 ">Note</label>
+                        <textarea id="note" name="note" class="form-control" rows="5"
+                                  placeholder="Inserire le note opzionali" style='text-transform:uppercase'></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+					<button type="button" id="form-del" class="btn btn-default btn-lg" data-dismiss="modal">Chiudi</button>
+                    <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right "
+                            data-toggle="modal" data-target="#myModalreg">Registra modifiche
+                    </button>
+                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+</div>
+</body>
+
+<script type="text/javascript" src="js/validator.min.js"></script>
+<script type="text/javascript" src="js/form-modificaauto.js"></script>
+
+
+</html>

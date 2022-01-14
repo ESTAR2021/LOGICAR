@@ -1,0 +1,112 @@
+*{
+	padding:0;
+	margin:0;
+	border:0;
+	
+}
+
+body{
+	background-size: 100% auto;
+	
+}
+
+.blended_grid{
+	display:block;
+	width:900px;
+	overflow:auto;
+	margin: 30px auto 0 auto;
+}
+
+.pageHeader{
+	background-color:#FFF;
+	float:left;
+	clear:none;
+	height:50px;
+	width:100%;
+	text-align:center;
+}
+
+.pageLeftMenu{
+	float:left;
+	clear:none;
+	height:600px;
+	overflow:auto;
+		display:block;
+
+}
+
+.pageContent{
+	float:left;
+	clear:none;
+	height:590px;
+	width:890px;
+	overflow:hidden;
+		display:block;
+	
+}
+
+.pageFooter{
+	
+	float:left;
+	clear:none;
+	height:100px;
+	width:900px;
+	
+}
+
+.room_button_1{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	width: 100px;
+}
+.room_button_2{
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	width: 100px;
+}
+.room_button_3{
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	width: 100px;
+}
+.room_button_4{
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	width: 100px;
+}
+
+.scadenzario{
+	width: 50%;
+	height: 50%;
+	float:left;
+}
+.scadenzario dx{
+	width: 50%;
+	height: 50%;
+	float:left;
+	padding-left:3px;
+}

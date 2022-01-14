@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+<style type="text/css">
+
+.custom-date-style {
+	background-color: red !important;
+}
+
+.input{	
+}
+.input-wide{
+	width: 500px;
+}
+
+</style>
+<link rel="stylesheet" href="css/form-required.css">
+	<script src="js/jquery.datetimepicker.full.js"></script>
+	<script type="text/javascript" src="js/dataoraita.js"></script>
+	<script type="text/javascript" src="js/validator.min.js"></script>
+</head>
+<body>
+<br />
+<button type="button" id="tornatabella_riserva" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>  Torna alla tabella riserve</button>
+
+	
+	<div id="menu"></div>
+<div class="row">
+<div class="col-sm-10">
+    <div class="well" style="margin-top: 1%; margin-left:20%">
+	<div align="left"><img src="img/stop.png" /></div>
+    <form role="form" id="manutenzione_officina" data-toggle="validator" class="shake">
+		
+		
+		
+		<div class="form-group col-sm-6">
+			<label for="id_auto" class="h4">Numero Mezzo: </label>
+				<input type="number" class="form-control" readonly id="id_auto" name="id_auto">
+			</div>
+        
+			<div class="form-group col-sm-6">
+				<label for="dataora_man_da" class="h4">Data DA:</label>
+				<input type="text" class="some_class form-control"  id="dataora_man_da" required data-error="Il campo data è obbligatorio e numerico"/>
+				<div class="help-block with-errors"></div>
+			</div>
+
+			<div class="form-group col-sm-6">
+                <label for="dataora_man_a" class="h4">Data A:</label>
+               <input type="text" class="some_class form-control"  id="dataora_man_a" required data-error="Il campo data è obbligatorio e numerico"/>
+			   <div class="help-block with-errors"></div>
+            </div>
+			
+								   
+											
+							 <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right " data-toggle="modal" data-target="#myModalregriserva">Riserva auto</button>
+						<div id="msgmanutenzioneSubmit" class="h3 text-center hidden"></div>
+						<div class="clearfix"></div>
+	</form>
+					</div>
+				</div>
+				</div>
+
+
+
+
+
+  </div>
+  </div>
+</body>
+
+
+</html>

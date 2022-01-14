@@ -1,0 +1,438 @@
+<html>
+<head>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/datedropper.js"></script>
+    <script src="../js/timedropper.js"></script>
+    <script src="../js/prenotazione_da_approvare.js"></script>
+    <script src="../js/template_prenotazione.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/timedropper.css">
+    <link rel="stylesheet" type="text/css" href="../css/datedropper.css">
+    <link rel="stylesheet" type="text/css" href="../css/video_style.css">
+    <link rel="stylesheet" type="text/css" href="../css/cornerbox.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/prenotazioni_da_approvare.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+
+    <style>
+        #modalstep .modal-dialog  {width:75%;}
+    </style>
+		
+<meta charset="UTF-8">
+</head>
+<body>
+<div id='menu'></div>
+
+
+<div class="fullscreen-bg">
+    <video loop muted autoplay poster="../img/booking/dsc0387.jpg" class="fullscreen-bg__video">
+        <source src="../img/video/343019031.mp4" type="video/mp4">
+        <source src="../img/video/343019031.webm" type="video/webm">
+    </video>
+</div>
+
+<div class="container">
+<div class="loader">
+	</div>
+	<div class="modal fade" id="modal_risultato" tabindex="-1" role="dialog" aria-labelledby="Prenotazione Accettata" aria-hidden="true">
+	</div>
+	
+
+    <div class="col-md-12 " >
+
+        <div class="col-md-12" id="riepilogo">
+            <img class="spostamento" src="../img/booking/prenotazioni_da_approvare.png">
+            <div>
+			<div class="sfondo_box_auto" id='nessuna_prenotazione'  hidden>
+   
+                <div class='row' >
+				 <div class="col-md-2 " ></div>
+                    <div class="col-md-8 titoli" >
+                       <center> Nessuna prenotazione da approvare</center>
+                    </div>
+                 <div class="col-md-2 " ></div> 
+                </div>
+			</div>
+
+				
+			<div class="sfondo_box_auto" id='riep_0' hidden>
+                    <div class='row'>
+                        <div class="col-md-2 titoli" >
+                           Autista
+                        </div>
+                        <div class="col-md-4 contenuti" id='autista_0' ></div>
+						 <div class="col-md-1 titoli" >
+                           Data/Ora
+                        </div>
+                        <div class="col-md-5 contenuti" id='dataoraviaggio_0' ></div>
+					 </div>
+					 <div class='row'>
+							<div class="col-md-2 titoli" >
+								Partenza
+							</div>
+							<div class="col-md-4 contenuti" id='luogopart_0'></div>
+							<div class="col-md-1 titoli" >
+								Destinazione
+							</div>
+							<div class="col-md-5 contenuti" id='luogodest_0'></div>
+					 </div>
+					 <div class='row'>
+						 <div class="col-md-2 titoli" >
+                           Motivo Viaggio
+                        </div>
+                        <div class="col-md-10 contenuti" id='motivoviaggio_0' >
+
+                        </div>
+                    </div>
+      
+
+
+                <div class='row'>
+                    <div class="col-md-2 macchina" >
+                        Auto scelta
+                    </div>
+                    <div class="col-md-9 contenuti" id='auto_0' >
+                    </div>
+					<div class="col-md-1 " >
+					<button type="button" class="btn btn-warning cambia_0 clearfix">Altre...</button>
+					</div>
+                </div>
+								
+				<div class='row auto-alternativa'>
+                    <div class="col-md-2 macchina" >
+                        Auto alternative
+                    </div>
+					<div class="col-md-9 classe_auto_alternative" id='auto_altenativa_0'>
+					</div>
+					<div class="col-md-1 " >
+					<button id="btn_sostituisci_auto_0" type="button" class="btn btn-warning clearfix">Cambia</button>
+					</div>
+                </div>
+								
+
+				<div class='row'>
+				 <div class="col-md-9">
+				 </div>
+                <div class="col-md-3">
+					<input type='text' class='identificativo' hidden id='identificativo_0'>
+			<!--		<input type='text' class='identificativo_auto' hidden id='identificativo_auto_0'> -->
+					<button type="button" class="btn btn-success approva" >Approva</button>
+                    <button type="button" class="btn btn-danger rifiuta" >Rifiuta</button>
+                           
+            
+                </div></div>
+				</div>
+				
+				
+				
+				<div class="sfondo_box_auto" id='riep_1' hidden>
+                    <div class='row'>
+                        <div class="col-md-2 titoli" >
+                           Autista
+                        </div>
+                        <div class="col-md-4 contenuti" id='autista_1' >
+
+                        </div>
+						 <div class="col-md-2 titoli" >
+                           Data/Ora
+                        </div>
+                        <div class="col-md-4 contenuti" id='dataoraviaggio_1' >
+
+                        </div>
+					 </div>
+					 <div class='row'>
+							<div class="col-md-2 titoli" >
+								Partenza
+							</div>
+							<div class="col-md-4 contenuti" id='luogopart_1'></div>
+							<div class="col-md-1 titoli" >
+								Destinazione
+							</div>
+							<div class="col-md-5 contenuti" id='luogodest_1'></div>
+					 </div>
+					 <div class='row'>
+						 <div class="col-md-2 titoli" >
+                           Motivo Viaggio
+                        </div>
+                        <div class="col-md-10 contenuti" id='motivoviaggio_1' >
+
+                        </div>
+                    </div>
+      
+
+
+                <div class='row'>
+                    <div class="col-md-2 macchina" >
+                        Auto scelta
+                    </div>
+                    <div class="col-md-9 contenuti" id='auto_1' >
+                    </div>
+					<div class="col-md-1" >
+					<button type="button" class="btn btn-warning cambia_1" >Altre...</button>
+					</div>
+                </div>
+
+				<div class='row auto-alternativa'>
+                    <div class="col-md-2 macchina" >
+                        Auto alternative
+                    </div>
+					<div class="col-md-9 classe_auto_alternative" id='auto_altenativa_1'>
+					</div>
+					<div class="col-md-1 " >
+					<button id="btn_sostituisci_auto_1" type="button" class="btn btn-warning clearfix">Cambia</button>
+					</div>
+                </div>
+
+
+            	<div class='row'>
+				 <div class="col-md-9">
+				 </div>
+                <div class="col-md-3">
+					<input type='text' class='identificativo' hidden id='identificativo_1'>
+					<button type="button" class="btn btn-success approva" >Approva</button>
+                    <button type="button" class="btn btn-danger rifiuta">Rifiuta</button>
+                           
+            
+                </div></div>
+				</div>
+				<div class="sfondo_box_auto" id='riep_2' hidden>
+                    <div class='row'>
+                        <div class="col-md-2 titoli" >
+                           Autista
+                        </div>
+                        <div class="col-md-4 contenuti" id='autista_2' >
+
+                        </div>
+						 <div class="col-md-2 titoli" >
+                           Data/Ora
+                        </div>
+                        <div class="col-md-4 contenuti" id='dataoraviaggio_2' >
+
+                        </div>
+					 </div>
+					 <div class='row'>
+							<div class="col-md-2 titoli" >
+								Partenza
+							</div>
+							<div class="col-md-4 contenuti" id='luogopart_2'></div>
+							<div class="col-md-1 titoli" >
+								Destinazione
+							</div>
+							<div class="col-md-5 contenuti" id='luogodest_2'></div>
+					 </div>
+					 <div class='row'>
+						 <div class="col-md-2 titoli" >
+                           Motivo Viaggio
+                        </div>
+                        <div class="col-md-10 contenuti" id='motivoviaggio_2' >
+
+                        </div>
+                    </div>
+      
+
+
+                <div class='row'>
+                    <div class="col-md-2 macchina" >
+                        Auto scelta
+                    </div>
+                    <div class="col-md-9 contenuti" id='auto_2' >
+                    </div>
+					<div class="col-md-1 " >
+					<button type="button" class="btn btn-warning cambia_2 clearfix">Altre...</button>
+					</div>
+                </div>
+
+				<div class='row auto-alternativa'>
+                    <div class="col-md-2 macchina" >
+                        Auto alternative
+                    </div>
+					<div class="col-md-9 classe_auto_alternative" id='auto_altenativa_2'>
+					</div>
+					<div class="col-md-1 " >
+					<button id="btn_sostituisci_auto_2" type="button" class="btn btn-warning clearfix">Cambia</button>
+					</div>
+                </div>
+
+
+				<div class='row'> 
+				<div class="col-md-9">
+				 </div>
+                <div class="col-md-3">
+					<input type='text' class='identificativo' hidden id='identificativo_2'>
+					<button type="button" class="btn btn-success approva">Approva</button>
+                    <button type="button" class="btn btn-danger rifiuta">Rifiuta</button>
+                           
+            
+                </div></div>
+				</div>
+				<div class="sfondo_box_auto" id='riep_3' hidden>
+                    <div class='row'>
+                        <div class="col-md-2 titoli" >
+                           Autista
+                        </div>
+                        <div class="col-md-4 contenuti" id='autista_3' >
+
+                        </div>
+						 <div class="col-md-2 titoli" >
+                           Data/Ora
+                        </div>
+                        <div class="col-md-4 contenuti" id='dataoraviaggio_3' >
+
+                        </div>
+					 </div>
+					 <div class='row'>
+							<div class="col-md-2 titoli" >
+								Partenza
+							</div>
+							<div class="col-md-4 contenuti" id='luogopart_3'></div>
+							<div class="col-md-1 titoli" >
+								Destinazione
+							</div>
+							<div class="col-md-5 contenuti" id='luogodest_3'></div>
+					 </div>
+					 <div class='row'>
+						 <div class="col-md-2 titoli" >
+                           Motivo Viaggio
+                        </div>
+                        <div class="col-md-10 contenuti" id='motivoviaggio_3' >
+
+                        </div>
+                    </div>
+      
+
+
+                <div class='row'>
+                    <div class="col-md-2 macchina" >
+                        Auto scelta
+                    </div>
+                    <div class="col-md-9 contenuti" id='auto_3' >
+                    </div>
+					<div class="col-md-1 " >
+					<button type="button" class="btn btn-warning cambia_3" >Altre...</button>
+					</div>
+                </div>
+
+				<div class='row auto-alternativa'>
+                    <div class="col-md-2 macchina" >
+                        Auto alternative
+                    </div>
+					<div class="col-md-9 classe_auto_alternative" id='auto_altenativa_3'>
+					</div>
+					<div class="col-md-1 " >
+					<button id="btn_sostituisci_auto_3" type="button" class="btn btn-warning clearfix">Cambia</button>
+					</div>
+                </div>
+
+
+               	<div class='row'>
+				 <div class="col-md-9">
+				 </div>
+                <div class="col-md-3">
+					<input type='text' class='identificativo' hidden id='identificativo_3'>
+					<button type="button" class="btn btn-success approva">Approva</button>
+                    <button type="button" class="btn btn-danger rifiuta">Rifiuta</button>
+                           
+            
+                </div></div>
+				
+				</div>
+				<div class="sfondo_box_auto" id='riep_4' hidden>
+                    <div class='row'>
+                        <div class="col-md-2 titoli" >
+                           Autista
+                        </div>
+                        <div class="col-md-4 contenuti" id='autista_4' >
+
+                        </div>
+						 <div class="col-md-2 titoli" >
+                           Data/Ora
+                        </div>
+                        <div class="col-md-4 contenuti" id='dataoraviaggio_4' >
+
+                        </div>
+					 </div>
+					 <div class='row'>
+							<div class="col-md-2 titoli" >
+								Partenza
+							</div>
+							<div class="col-md-4 contenuti" id='luogopart_4'></div>
+							<div class="col-md-1 titoli" >
+								Destinazione
+							</div>
+							<div class="col-md-5 contenuti" id='luogodest_4'></div>
+					 </div>
+					 <div class='row'>
+						 <div class="col-md-2 titoli" >
+                           Motivo Viaggio
+                        </div>
+                        <div class="col-md-10 contenuti" id='motivoviaggio_4' >
+
+                        </div>
+                    </div>
+      
+
+
+                <div class='row'>
+                    <div class="col-md-2 macchina" >
+                        Auto scelta
+                    </div>
+                    <div class="col-md-9 contenuti" id='auto_4' >
+                    </div>
+					<div class="col-md-1 " >
+					<button type="button" class="btn btn-warning cambia_4" >Altre...</button>
+					</div>
+                </div>
+
+				<div class='row auto-alternativa'>
+                    <div class="col-md-2 macchina" >
+                        Auto alternative
+                    </div>
+					<div class="col-md-9 classe_auto_alternative" id='auto_altenativa_4'>
+					</div>
+					<div class="col-md-1 " >
+					<button id="btn_sostituisci_auto_4" type="button" class="btn btn-warning clearfix">Cambia</button>
+					</div>
+                </div>
+
+
+              	<div class='row'>
+				 <div class="col-md-9">
+				 </div>
+                <div class="col-md-3">
+						<input type='text' class='identificativo' hidden id='identificativo_4'>
+						<button type="button" class="btn btn-success approva">Approva</button>
+                        <button type="button" class="btn btn-danger rifiuta">Rifiuta</button>
+                           
+            
+                </div></div>
+				
+				
+				
+                <div class="clearfix">
+                    <br>
+                </div>
+				</div>
+				<ul class="pagination">
+				 
+				</ul>
+            </div>
+        </div>
+    </div>
+	
+</div>
+<!-- Div per finestra modale avanzamento step -->
+<div class="modal fade" id="modalstep" tabindex="-1" role="dialog" aria-labelledby="Prenotazione auto" aria-hidden="true">
+
+<!-- =========================================== -->
+
+
+
+
+
+</body>
+
+</html>

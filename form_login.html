@@ -1,0 +1,37 @@
+<form class="form-signin" id="loginform" method="POST">
+
+    <h2 class="form-signin-heading"><img src='img/logo_small.png'> </h2>
+    <label for="cf" class="sr-only">Codice Fiscale</label>
+    <input type="text" id="cf" name="cf" class="form-control" placeholder="Codice Fiscale/Utente AOUS" required autofocus>
+    <label for="password" class="sr-only">Password</label>
+    <input type="password" id="password" name="psw" class="form-control" placeholder="Password" required>
+    <div class="alert alert-danger" id='errore' hidden>
+        <strong>Attenzione!</strong> Le credenziali inserite sono errate
+    </div>
+
+    <!--<div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"> Ricordami
+      </label>
+    </div>-->
+		
+    <button class="btn btn-lg btn-primary btn-block" type="button"  id="form-submit" >Login</button>
+		<!-- bottone accesso con cedolino -->
+		<!---
+     <a id="loginEstar" class="btn btn-primary btn-block"
+       title="Accedi all'area riservata tramite Cedolino"
+       href="https://login.estar.toscana.it/index.php?
+           urlok=aHR0cHM6Ly9sb2dpY2FyLmVzdGFyLnRvc2NhbmEuaXQvTE9HSUNBUi9wcm9jZXNzYS5waHA=
+           &urlko=aHR0cHM6Ly9sb2dpY2FyLmVzdGFyLnRvc2NhbmEuaXQvTE9HSUNBUi9lcnJvcmUuaHRtbA==">
+        Accedi tramite Cedolino</a>
+		-->
+		<!-- bottone accesso con LDAP AOUS -->
+		<br>
+		 <button class="btn btn-md btn-primary btn-block" type="button" id="loginLdapAous" name="loginLdapAous">Accedi tramite LDAP (AOUS)</button>
+		 <!-- video manuale -->
+		 <br>
+		 <button class="btn btn-md btn-link btn-block" type="button"  id="video-manuale"  onclick="window.open('https://logicar.estar.toscana.it/LOGICAR/video_prenotazione_autoparco.mp4','_blank');">Video demo prenotazione</button>
+</form>
+
+<!--Base64 LOGICAR_TEST: aHR0cHM6Ly9sb2dpY2FyLmVzdGFyLnRvc2NhbmEuaXQvTE9HSUNBUl9URVNUL3Byb2Nlc3NhLnBocA==-->
+<!--Base64 LOGICAR: aHR0cHM6Ly9sb2dpY2FyLmVzdGFyLnRvc2NhbmEuaXQvTE9HSUNBUi9ib29raW5nL2hvbWUuaHRtbA==-->

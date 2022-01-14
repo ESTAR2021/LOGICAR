@@ -1,0 +1,170 @@
+<html>
+<head>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="css/form-required.css">
+	 <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.min.css">
+     <link rel="stylesheet" href="css/bootstrap.css">
+	 <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css">
+
+	<script type="text/javascript" language="javascript" src="js/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" language="javascript" src="js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="js/dataTables.bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/datahref.jquery.js"></script>
+	<script type="text/javascript" language="javascript" src="js/viaggi.js"></script>
+	<script type="text/javascript" src="js/validator.min.js"></script>
+	<script type="text/javascript" language="javascript" src="js/jquery.datetimepicker.full.js"></script>
+		<script type="text/javascript" src="js/trasporto.js"></script>
+	</head>
+<body>
+<div class="container" id="container" >
+
+<div id="menu"></div>
+	<div id='viaggi' >
+<button type="button" id='b_addViaggio' class="btn btn-primary " data-toggle="modal" data-target="#viaggioModel"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>  Pianifica Viaggio</button>	
+
+<table id="tab_viaggi" class="table table-striped table-bordered" cellspacing="0" width="100%" style="font-size:small">
+</table>
+</div>
+
+		<div id="cancella_viaggio" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Cancella Viaggio</h4>
+			  </div>
+			  <div class="modal-body">
+				Sei sicuro di voler cancellare il Viaggio?
+			
+			  </div>
+			  <div class="modal-footer">
+				<form role="form" id="cancella_viaggio_form"  class="shake">		
+				<input type='text' name='viaggio' id='delViaggio' hidden readonly>
+				<button type="button" class="btn btn-default chiudi_modale" data-dismiss="modal">Annulla</button>
+				<button type="submit" id="form-submit" class="btn btn-success  pull-right  " data-toggle="modal" data-target="#esito" style="pointer-events: all; cursor: pointer;">Cancella Viaggio</button>
+				</form>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+		
+		<div id="viaggioModel" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title"></h4>
+			  </div>
+				<div class="modal-body">	
+				<form role="form" id="aggiungi_viaggio_form" data-toggle="validator" class="shake">				
+					<div class="row">
+						<div class="form-group col-sm-6 ">
+						<label for="matricola" class="h4">Matricola Autista</label>
+						<input type="text" class="form-control matricola" id="matricola" name="matricola" placeholder="Inserire la matricola" required="" data-error="Il campo cilindrata è obbligatorio e numerico" style="text-transform:uppercase" readonly>
+						</div>
+						<div class="form-group col-sm-6 ">
+						<label for="dataviaggio" class="h4">Data Viaggio</label>
+						<input type="text" class="form-control" id="dataviaggio" name="dataviaggio" placeholder="Inserire il Data" required="" data-error="Il campo Data è obbligatorio" style="text-transform:uppercase">
+						</div>
+						
+				  </div>
+				  
+				  <div class="row">
+						<div class="form-group col-sm-12 ">	
+						<label for="destinazione" class="h4">Indirizzo Destinazione</label>
+						<input type="text" class="form-control" id="destinazione" name="destinazione" placeholder="Inserire l'indirizzo" required="" data-error="Il campo Indirizzo è obbligatorio" style="text-transform:uppercase">
+						</select>
+						</div>
+						
+				  </div>
+				    <div class="row">
+						<div class="form-group col-sm-12 ">	
+						<label for="auto" class="h4">Auto da utilizzare</label>
+						<select name="auto" id="auto" disabled class="form-control" required="" data-error="Il campo auto è obbligatorio">
+						</select>
+						</div>
+						
+				  </div>
+				
+			</div>  
+			  <div class="modal-footer">
+				
+				<button type="button" id='chiudi_modale' class="btn btn-default btn-lg " data-dismiss="modal">Annulla</button>
+				<button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right  " data-toggle="modal" data-target="#esito" style="pointer-events: all; cursor: pointer;">Registra Viaggio</button>
+				
+			  </div>
+			  </form>
+			</div>
+
+		  </div>
+		</div>
+		
+		<div id="load_etichette" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Carico Richieste</h4>
+			  </div>
+			  <div class="modal-body">
+		
+			   <div class="row">
+						<div class="form-group col-sm-12 ">	
+						<label for="carico" class="h4">	Carica:</label>
+						<input type="text" class="form-control" id="carico" name="carico" placeholder="Barcode" style="text-transform:uppercase">
+				
+						</select>
+						</div>
+						
+				</div>
+				<div class="row">
+						<div class="form-group col-sm-12 ">	
+						<label for="carico" class="h4">	Scarica:</label>
+						<input type="text" class="form-control" id="scarico" name="scarico" placeholder="Barcode" style="text-transform:uppercase">
+						</select>
+						</div>
+						
+				</div>
+				<div class="row">
+						<div class="form-group col-sm-12 ">	
+						<label for="carico" class="h4"><b>Elenco Richieste caricate per il: </b><em id='data_oggi'> </em></label>
+						<table id="tab_elenco_etichette" class="table table-striped table-bordered" cellspacing="0" width="100%" style="font-size:small">
+						</table>
+						</select>
+						</div>
+						
+				</div>	
+				<div class="row">
+						<div class="form-group col-sm-12 ">	
+						<label for="" class="h4"><em id='results_carico_scarico'></em></label>
+						
+						</div>
+						
+				</div>
+				
+			  <input type="text" hidden readonly id="idViaggioUpload" name="idViaggioUpload" >
+	
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+		
+		
+		<div id="esito" class="modal fade" style="display: none;"></div>
+		</div>
+
+	</body>
+	</html>

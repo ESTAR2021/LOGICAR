@@ -1,0 +1,164 @@
+<html>
+<head>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<link rel="stylesheet" href="css/form-required.css">
+
+	<link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.min.css">
+     <link rel="stylesheet" href="css/bootstrap.css">
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" language="javascript" src="js/application.js"></script>
+	<script type="text/javascript" src="js/validator.min.js"></script>
+
+<style> [required] { background-color: yellow;} </style>
+</head>
+<body>
+<div class="container" id="container" >
+
+<div id="menu"></div><br><br>
+	<div id='autisti' >
+<button type="button" id='b_addOp' class="btn btn-primary " data-toggle="modal" data-target="#autistaModal"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>  Aggiungi Dipendente</button>	
+<br><br>
+<table id="tab_autisti" class="table table-striped table-bordered" cellspacing="0" width="100%" style="font-size:small">
+</table>
+</div>
+
+		<div id="cancella_autista" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Cancella Autista</h4>
+			  </div>
+			  <div class="modal-body">
+				Sei sicuro di voler cancellare l'Autista?
+			
+			  </div>
+			  <div class="modal-footer">
+				<form role="form" id="cancella_autista_"  class="shake">
+				<input type='text' name='matricola' id='delMatricola' hidden readonly>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
+				<button type="submit"  class="btn btn-success  pull-right  " data-toggle="modal" data-target="#esito" style="pointer-events: all; cursor: pointer;">Cancella Autista</button>
+				</form>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+		
+		<div id="autistaModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title titolo"></h4>
+			  </div>
+				<div class="modal-body">
+				
+				<form role="form" enctype="multipart/form-data" id='autista_form' data-toggle="validator" class="shake form">	
+				<input type='text' name='tipo_op' id='tipo_op' hidden readonly>
+				<input type='text' name='matricola' id='matricola' hidden readonly>
+					<div class="row">
+						<div class="form-group col-sm-6 ">
+						<label for="matricola" class="h4">Matricola</label>
+						<input type="text" class="form-control" id="badge" name="badge" placeholder="Inserire la matricola" required data-error="Il campo matricola è obbligatorio e numerico" style="text-transform:uppercase">
+						</div>
+						<div class="form-group col-sm-6 ">
+						<label for="cf" class="h4">Codice Fiscale</label>
+						<input type="text" class="form-control" id="cf" name="cf" placeholder="Inserire il Codice Fiscale" required data-error="Il campo Codice Fiscale è obbligatorio" style="text-transform:uppercase">
+						</div>
+						
+				  </div>
+				  	<div class="row">
+						<div class="form-group col-sm-6 ">
+						<label for="nome" class="h4">Nome</label>
+						<input type="text" class="form-control" id="nome" name="nome" placeholder="Inserire il Nome" required data-error="Il campo nome è obbligatorio" style="text-transform:uppercase">
+						</div>
+						<div class="form-group col-sm-6 ">
+						<label for="cognome" class="h4">Cognome</label>
+						<input type="text" class="form-control" id="cognome" name="cognome" placeholder="Inserire il Cognome" required data-error="Il campo Cognome è obbligatorio" style="text-transform:uppercase">
+						</div>
+						
+				  </div>
+				  <div class="row">
+						<div class="form-group col-sm-12 ">	
+						<label for="asl" class="h4">ASL</label>
+						<select name="asl" id="asl" class="form-control" required data-error="Il campo asl è obbligatorio">
+						</select>
+						</div>
+						
+				  </div> 
+				  <div class="row">
+						<div class="form-group col-sm-12 ">	
+						<label for="sede" class="h4">SEDE</label>
+						<select name="sede" id="sede" class="form-control" required data-error="Il campo sede è obbligatorio">
+						</select>
+						</div>
+						
+				  </div>
+				    <div class="row">
+						<div class="form-group col-sm-12 ">	
+						<label for="email" class="h4">Indirizzo Mail</label>
+						<input type='text' name="email" id="email" class="form-control" >
+						
+						</div>
+						
+				  </div>
+				   	<div class="row">
+						<div class="form-group col-sm-6 ">
+						<label for="nascita" class="h4">Amministrativo</label>
+						<input type="checkbox" class="form-control" id="amministrativo" name="amministrativo" placeholder="Inserire il Data" data-error="Il campo Data di Nascita è obbligatorio" style="text-transform:uppercase">
+						</div>
+						<div class="form-group col-sm-6 ">
+						<label for="comune_nascita" class="h4">Portineria</label>
+						<input type="checkbox" class="form-control" id="portineria" name="portineria" placeholder="Inserire il Data" data-error="Il campo Data di Nascita è obbligatorio" style="text-transform:uppercase">
+						</div>
+						
+				  </div>
+				    <div class="row">
+						<div class="form-group col-sm-12 ">	
+						<label for="foto" class="h4">Foto identificativa</label>
+						</div>
+					</div>
+					 <div class="row">
+						<div class="form-group col-sm-6 ">	
+						<input type="file"  id="foto" name="foto" accept="image/*" onchange="loadFile(event)"></div>
+						<div class="form-group col-sm-6 ">
+						<img id="preview"/>	
+						</div>
+						
+				  </div>
+			</div>  
+				
+			 <div class="modal-footer">
+				
+				<button type="button" id='chiudi_modale' class="btn btn-default btn-lg " data-dismiss="modal">Annulla</button>
+				<button type="submit" id="form-submit" class="btn btn-success registra btn-lg pull-right  " data-toggle="modal" data-target="#esito" style="pointer-events: all; cursor: pointer;">Salva Dipendente</button>
+			
+				
+			  </div>
+			  
+				  </form>
+			</div>
+
+		  </div>
+		</div>
+		<div id="esito" class="modal fade" style="display: none;"></div>
+    </div>
+	
+	<div id="carica_foto" class="modal fade" role="dialog"></div>
+	</body>
+<script type="text/javascript">
+	App.loadJsFile('js/persone.js');
+</script>
+	</html>

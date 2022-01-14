@@ -1,0 +1,336 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    body {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+.box_step2_sinistra {
+
+        background: rgba(118, 205, 226, 0.4);
+        border-radius: 15px 50px;
+        /*max-width: 1150px;*/
+        /*max-height: 2650px;*/
+        margin: 20px auto;
+        position: absolute;
+
+    }
+
+.box_step2_destra {
+
+    background: rgba(132, 231, 173, 0.4);
+    border-radius: 15px 50px;
+    /*max-width: 1150px;*/
+    /*max-height: 2650px;*/
+    margin: 20px auto;
+    position: absolute;
+
+}
+
+.sfondo_box {
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px 50px;
+}
+
+.box_blue {
+
+        background: rgba(118, 205, 226, 0.4);
+        border-radius: 15px 50px;
+        /*max-width: 1150px;*/
+        /*max-height: 2650px;*/
+        margin: 20px auto;
+        position: absolute;
+
+    }
+
+#sfondo_step2 {
+    max-width: 1150px;
+}
+.linea_destra {
+    border-right: solid 1px #cccccc ;
+}
+.padded-left-form {
+    float: left;
+    margin-right: 3px;
+}
+
+.clear-left-form {
+    clear:both;
+    float:left;
+}
+.btn{
+	margin:10px;
+}
+.row{
+	margin:10px;
+}
+
+#info_aggiuntive {
+
+        background: #76cde2;
+   
+		background-image: url("../img/booking/bgbox.png");
+        background-position: top right;
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        /*max-width: 1150px;*/
+        /*max-height: 2650px;*/
+        margin: 20px auto;
+       /*background: white; !* For browsers that do not support gradients *!
+        background: -webkit-linear-gradient(#f9f9f9, #acacac); !* For Safari 5.1 to 6.0 *!
+        background: -o-linear-gradient(#cccccc, #f9f9f9); !* For Opera 11.1 to 12.0 *!
+        background: -moz-linear-gradient(#cccccc, #f9f9f9); !* For Firefox 3.6 to 15 *!
+        background: linear-gradient(#cccccc, #f9f9f9); !* Standard syntax *!*/
+
+        /
+
+    }
+	
+#mappa {
+
+        background: rgba(118, 205, 226, 0.4);
+		background-image: url("../img/booking/bgdiv.png");
+        border-radius: 15px;
+        /*max-width: 1150px;*/
+        max-height: 2650px;
+        margin: 20px auto;
+        position: absolute;
+
+    }
+
+.bordo {
+    border-radius: 15px;
+}
+
+.bordino {
+
+    margin: 2%;
+}
+
+.esterno_mappa {
+    background: white; /* For browsers that do not support gradients */
+
+    border-radius: 15px;
+    width: 100%;
+}
+
+.spostamento{
+    position: relative;
+    top: 12px;
+}
+
+
+.freccia_prosegui_step2 {
+    margin: auto 3%;
+    color: #dddddd;
+    /*font-size: 24px;*/
+}
+
+.freccia_prosegui_step2:hover {
+    color: #1d74ba;
+    /*font-size: 24px;*/
+}
+
+#percorso_andata, #percorso_ritorno {
+        max-height: 50%;
+        overflow: scroll;
+}
+
+#box_nuove {
+
+     background: #76cde2;
+     background-image: url("../img/booking/bgbox.png");
+     background-position: top right;
+     background-repeat: no-repeat;
+     border-radius: 15px;
+     /*max-height: 2650px;*/
+     margin: 20px auto;
+ }
+
+#box_condivise {
+
+      background: #ffb0e3;
+      background-image: url("../img/booking/bgbox_rosa.png");
+      background-position: top right;
+      background-repeat: no-repeat;
+      border-radius: 15px;
+      /*max-height: 2650px;*/
+      margin: 20px auto;
+  }
+
+#box_trasporti {
+
+    background: #84e7ad;
+    background-image: url("../img/booking/bgbox_verde.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    max-height: 2650px;
+    margin: 20px auto;
+}
+
+.sfondo_box_auto {
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.margine_sinistro {
+    margin-left: 40px;
+}
+
+.bottone_stampa {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-color:#BD1E2C;
+    color: #ffffff;
+    width: 220px;
+    height: 64px;
+	cursor: pointer;
+
+
+}
+
+.floatleft {
+    float: left;
+}
+
+.stampa {
+    vertical-align: middle;
+    margin: auto 20px;
+    padding-top: 8px;
+}
+
+#riepilogo {
+    background: #76cde2;
+    background-image: url("../img/booking/bgbox.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    /* max-height: 2650px; */
+    margin: 20px auto;
+}
+
+.titoli {
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      border:1px solid #F5F5F5;
+      background-color:#064769;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 5px 0px;
+  }
+
+.contenuti {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border:1px solid #F5F5F5;
+    background-color: rgba(196, 196, 196, 0.28);
+    /*color: #ffffff;*/
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 0px;
+}
+
+
+.macchina {
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border:1px solid #F5F5F5;
+    background-color:#00701A;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 0px;
+}
+
+.stato {
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border:1px solid #F5F5F5;
+    background-color:#a94442;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 0px;
+}
+
+.bottone_approva {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-color:#BD1E2C;
+    color: #ffffff;
+    width: 150px;
+    height: 45px;
+}
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../img/pageLoader.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+
+.titolo
+{
+	 font-size: 25px;
+	 text-align: center;
+
+}
+
+body {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+.font_benvenuto {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    /*text-shadow: 5px 5px 3px #b7b5b5;*/
+    color: #286090 !important;
+}
+
+.ombra_immagine {
+    /*box-shadow: 10px 10px 30px #b7b5b5;*/
+    width: 100%;
+}
+
+.bottone_prenota {
+     -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+     border-radius: 15px;
+     background-color: #909090;
+     color: #ffffff !important;
+     width: 220px;
+     height: 64px;
+ }
+
+.bottone_prenota a{
+    color: #ffffff !important;
+    display: block;
+}
+
+.bottone_prenota:hover{
+    background-color: #333333;
+}
+
+body header h1 {
+    font-size: 1.3rem !important;
+}

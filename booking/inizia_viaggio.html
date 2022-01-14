@@ -1,0 +1,250 @@
+<html>
+<head>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/datedropper.js"></script>
+    <script src="../js/timedropper.js"></script>
+    <script src="../js/start_viaggio.js"></script>
+    <script src="../js/template_prenotazione.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/timedropper.css">
+    <link rel="stylesheet" type="text/css" href="../css/datedropper.css">
+    <link rel="stylesheet" type="text/css" href="../css/video_style.css">
+    <link rel="stylesheet" type="text/css" href="../css/cornerbox.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/step3_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+ 
+
+
+    <style>
+        #modalstep .modal-dialog  {width:75%;}
+    </style>
+
+</head>
+<body>
+<div id='menu'></div>
+
+
+<div class="fullscreen-bg">
+    <video loop muted autoplay poster="../img/booking/dsc0387.jpg" class="fullscreen-bg__video">
+        <source src="../img/video/343019031.mp4" type="video/mp4">
+        <source src="../img/video/343019031.webm" type="video/webm">
+    </video>
+</div>
+
+<div class="container">
+
+    <div class="loader">
+	</div>
+
+    <div class="col-md-12 " >
+
+
+        <div class="col-md-12" id="riepilogo">
+            <img class="spostamento" src="../img/booking/inizia_viaggio.png">
+			<div class="sfondo_box_auto" id='nessuna_prenotazione'  hidden>
+   
+                <div class='row' >
+				 <div class="col-md-2 " ></div>
+                    <div class="col-md-8 titoli" >
+                       <center> Nessuna viaggio programmato e accettato per oggi</center>
+                    </div>
+                 <div class="col-md-2 " ></div> 
+                </div>
+			</div>
+			<div class="sfondo_box_auto" id='viaggio_iniziato'  hidden>
+   
+                <div class='row' >
+				 <div class="col-md-2 " ></div>
+                    <div class="col-md-8 stato" >
+                       <center> Attenzione!! Per poter iniziare un nuovo viaggio terminare il viaggio iniziato</center>
+					   
+                    </div>
+                 <div class="col-md-2 " >
+				  
+				   </div> 
+                </div>
+				  <div class='row' >
+				 <div class="col-md-2 " ></div>
+                    <div class="col-md-8 " >
+                    </div>
+                 <div class="col-md-2 " >
+						<button type="button" class="btn btn-success" id='vai_viaggio'>Vai al Viaggio</button>
+				   </div> 
+                </div>
+			</div>
+            <div class="sfondo_box_auto" id='dettagli'  >
+
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Giorno Partenza
+                        </div>
+                        <div class="col-md-6 contenuti" id='daypartenza' >
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Ora Partenza
+                        </div>
+                        <div class="col-md-6 contenuti" id='orapartenza'>
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Giorno Arrivo
+                        </div>
+                        <div class="col-md-6 contenuti" id='dayarrivo'>
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Ora Arrivo
+                        </div>
+                        <div class="col-md-6 contenuti" id='oraarrivo' >
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Sede Partenza
+                        </div>
+                        <div class="col-md-6 contenuti" id='sedepartenza'>
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Luogo Destinazione
+                        </div>
+                        <div class="col-md-6 contenuti" id='luogodest'>
+
+                        </div>
+                    </div>
+
+                        <div class='row'>
+                            <div class="col-md-6 titoli" >
+                                Passeggeri
+                            </div>
+                            <div class="col-md-6 contenuti" id='passeggeri'>
+
+                            </div>
+
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Tappe Intermedie Andata
+                        </div>
+                        <div class="col-md-6 contenuti" id='tappeandata'>
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Tappe Intermedie Ritorno
+                        </div>
+                        <div class="col-md-6 contenuti" id='tapperitorno'>
+
+                        </div>
+                    </div>
+
+
+
+                <div class="clearfix">
+                    <br>
+                </div>
+
+
+                <div class='row'>
+                    <div class="col-md-6 macchina" >
+                        Marca
+                    </div>
+                    <div class="col-md-6 contenuti" id='marca' >
+
+                    </div>
+                </div>
+
+
+                    <div class='row'>
+                <div class="col-md-6 macchina" >
+                    Alimentazione
+                </div>
+                <div class="col-md-6 contenuti" id='alimentazione' >
+
+                </div>
+            </div>
+
+                <div class='row'>
+                    <div class="col-md-6 macchina" >
+                        Anno
+                    </div>
+                    <div class="col-md-6 contenuti" id='anno' >
+
+                    </div>
+                </div>
+
+                <div class='row'>
+                    <div class="col-md-6 macchina" >
+                        Cilindrata
+                    </div>
+                    <div class="col-md-6 contenuti" id='cilindrata' >
+
+                    </div>
+                </div>
+
+			<div class='row'>
+                <div class="col-md-6 stato" >
+                   Motivo Viaggio
+                </div>
+                <div class="col-md-6 contenuti" id='motivo' >
+					
+                </div>
+            </div>
+              <div class='row'>
+                <div class="col-md-6 stato" >
+                    Stato Viaggio
+                </div>
+                <div class="col-md-6 contenuti" id='stato' >
+					
+                </div>
+            </div>
+
+
+
+                <div class="col-md-12">
+                    <div class="col-md-9">
+                        <br>
+                        <br>
+                    </div>
+                    <div class="col-md-3">
+				
+							<input type='text' id='id_viaggio' hidden>
+                            <button type="button" class="btn btn-success" id='start_viaggio'>Inizia Il Viaggio</button>
+					
+                 
+                    </div>
+                </div>
+				
+				
+				<ul class="pagination">
+				 
+				</ul>
+                <div class="clearfix">
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Div per finestra modale avanzamento step -->
+<div class="modal fade" id="modalstep" tabindex="-1" role="dialog" aria-labelledby="Prenotazione auto" aria-hidden="true">
+</body>
+
+</html>

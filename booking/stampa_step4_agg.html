@@ -1,0 +1,243 @@
+<html>
+<head>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/application.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <style type="text/css">
+        @media print{
+            body{ background-color:#FFFFFF; background-image:none; color:#000000; }
+            #ad{ display:none;}
+            #leftbar{ display:none;}
+            #contentarea{ width:100%;}
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+ <div class="col-md-12" id="riepilogo">
+            
+				<div class='row'>
+					
+                        <div class="col-md-6 titoli" >
+                            Riepilogo
+                        </div>
+                        <div class="col-md-3 macchina" id='andata' >
+
+                        </div>
+						 <div class="col-md-3 macchina" id='ritorno' >
+
+                        </div>
+                    </div>
+					    <div class="clearfix">
+                    <br>
+                </div>
+				<div class='row'>
+					
+                        <div class="col-md-6 titoli" >
+                            Autista
+                        </div>
+                        <div class="col-md-3 contenuti" id='autista' >
+
+                        </div>
+						 <div class="col-md-3 contenuti" id='autista_r' >
+
+                        </div>
+                    </div>
+					    <div class="clearfix">
+                    <br>
+                </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Giorno Partenza
+                        </div>
+                        <div class="col-md-3 contenuti" id='daypartenza' >
+
+                        </div>
+						<div class="col-md-3 contenuti" id='daypartenza_r' >
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Ora Partenza
+                        </div>
+                        <div class="col-md-3 contenuti" id='orapartenza'>
+
+                        </div>
+						  <div class="col-md-3 contenuti" id='orapartenza_r'>
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Giorno Arrivo
+                        </div>
+                        <div class="col-md-3 contenuti" id='dayarrivo'>
+
+                        </div>
+						  <div class="col-md-3 contenuti" id='dayarrivo_r'>
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Ora Arrivo
+                        </div>
+                        <div class="col-md-3 contenuti" id='oraarrivo' >
+
+                        </div>
+						  <div class="col-md-3 contenuti" id='oraarrivo_r' >
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Sede Partenza
+                        </div>
+                        <div class="col-md-3 contenuti" id='sedepartenza'>
+
+                        </div>
+						<div class="col-md-3 contenuti" id='sedepartenza_r'>
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Luogo Destinazione
+                        </div>
+                        <div class="col-md-3 contenuti" id='luogodest'>
+
+                        </div>
+						<div class="col-md-3 contenuti" id='luogodest_r'>
+
+                        </div>
+                    </div>
+
+                        <div class='row'>
+                            <div class="col-md-6 titoli" >
+                                Passeggeri
+                            </div>
+                            <div class="col-md-3 contenuti" id='passeggeri'>
+
+                            </div>
+							   <div class="col-md-3 contenuti" id='passeggeri_r'>
+
+                            </div>
+
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Tappe Intermedie Andata
+                        </div>
+                        <div class="col-md-3 contenuti" id='tappeandata'>
+
+                        </div>
+						<div class="col-md-3 contenuti" id='tappeandata_r'>
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Tappe Intermedie Ritorno
+                        </div>
+                        <div class="col-md-3 contenuti" id='tapperitorno'>
+
+                        </div>
+						    <div class="col-md-3 contenuti" id='tapperitorno_r'>
+
+                        </div>
+                    </div>
+
+
+
+                <div class="clearfix">
+                    <br>
+                </div>
+
+
+                <div class='row'>
+                    <div class="col-md-6 macchina" >
+                        Marca
+                    </div>
+                    <div class="col-md-3 contenuti" id='marca' >
+
+                    </div>
+					 <div class="col-md-3 contenuti" id='marca_r' >
+
+                    </div>
+                </div>
+
+
+                    <div class='row'>
+                <div class="col-md-6 macchina" >
+                    Alimentazione
+                </div>
+                <div class="col-md-3 contenuti" id='alimentazione' >
+
+                </div>
+				     <div class="col-md-3 contenuti" id='alimentazione_r' >
+
+                </div>
+            </div>
+
+                <div class='row'>
+                    <div class="col-md-6 macchina" >
+                        Anno
+                    </div>
+                    <div class="col-md-3 contenuti" id='anno' >
+
+                    </div>
+					 <div class="col-md-3 contenuti" id='anno_r' >
+
+                    </div>
+                </div>
+
+                <div class='row'>
+                    <div class="col-md-6 macchina" >
+                        Cilindrata
+                    </div>
+                    <div class="col-md-3 contenuti" id='cilindrata' >
+
+                    </div>
+					 <div class="col-md-3 contenuti" id='cilindrata_r' >
+
+                    </div>
+                </div>
+
+			
+              <div class='row'>
+                <div class="col-md-6 stato" >
+                   Motivo Viaggio
+                </div>
+                <div class="col-md-3 contenuti" id='motivo' >
+					
+                </div>
+				  <div class="col-md-3 contenuti" id='motivo_r' >
+					
+                </div>
+            </div>
+
+              <div class='row'>
+                <div class="col-md-6 stato" >
+                    Stato Viaggio
+                </div>
+                <div class="col-md-3 contenuti" id='stato' >
+					
+                </div>
+				  <div class="col-md-3 contenuti" id='stato_r' >
+					
+                </div>
+            </div>
+
+</div>
+
+<script type="text/javascript">
+    App.loadJsFile('../js/stampa_step_4_agg.js');
+
+</script>
+
+</html>

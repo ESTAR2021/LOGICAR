@@ -1,0 +1,327 @@
+<html>
+<head>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/datedropper.js"></script>
+    <script src="../js/timedropper.js"></script>
+    <script src="../js/application.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/timedropper.css">
+    <link rel="stylesheet" type="text/css" href="../css/datedropper.css">
+    <link rel="stylesheet" type="text/css" href="../css/video_style.css">
+    <link rel="stylesheet" type="text/css" href="../css/cornerbox.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/step3_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+ 
+
+
+    <style>
+        #modalstep .modal-dialog  {width:75%;}
+    </style>
+
+</head>
+<body>
+<div id='menu'></div>
+
+
+<div class="fullscreen-bg">
+    <video loop muted autoplay poster="../img/booking/dsc0387.jpg" class="fullscreen-bg__video">
+        <source src="../img/video/343019031.mp4" type="video/mp4">
+        <source src="../img/video/343019031.webm" type="video/webm">
+    </video>
+</div>
+
+<div class="container">
+
+    <div class="loader">
+	</div>
+
+    <div class="col-md-12 " >
+
+
+        <div class="col-md-12" id="riepilogo">
+            <img class="spostamento" src="../img/booking/riepilogo_partecipazioni_viaggi.png">
+				<div class="sfondo_box_auto" id='nessuna_prenotazione'  hidden>
+   
+                <div class='row' >
+				 <div class="col-md-2 " ></div>
+                    <div class="col-md-8 titoli" >
+                       <center> Nessuna prenotazione effettuata</center>
+                    </div>
+                 <div class="col-md-2 " ></div> 
+                </div>
+			</div>
+			<div class="sfondo_box_auto" id='dettagli'>
+            <div class='row'>
+					
+                        <div class="col-md-6 titoli" >
+                            Riepilogo
+                        </div>
+                        <div class="col-md-3 macchina" id='andata' >
+
+                        </div>
+						 <div class="col-md-3 macchina" id='ritorno' >
+
+                        </div>
+                    </div>
+					    
+				<div class='row'>
+					
+                        <div class="col-md-6 titoli" >
+                            Tipologia
+                        </div>
+                        <div class="col-md-3 contenuti" id='tipologia' >
+
+                        </div>
+						 <div class="col-md-3 contenuti" id='tipologia_r' >
+
+                        </div>
+                    </div>
+		
+				<div class='row'>	
+                        <div class="col-md-6 titoli" >
+                            Autista
+                        </div>
+                        <div class="col-md-3 contenuti" id='autista' >
+
+                        </div>
+						 <div class="col-md-3 contenuti" id='autista_r' >
+
+                        </div>
+                    </div>
+
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Giorno Partenza
+                        </div>
+                        <div class="col-md-3 contenuti" id='daypartenza' >
+
+                        </div>
+						<div class="col-md-3 contenuti" id='daypartenza_r' >
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Ora Partenza
+                        </div>
+                        <div class="col-md-3 contenuti" id='orapartenza'>
+
+                        </div>
+						  <div class="col-md-3 contenuti" id='orapartenza_r'>
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Giorno Arrivo
+                        </div>
+                        <div class="col-md-3 contenuti" id='dayarrivo'>
+
+                        </div>
+						  <div class="col-md-3 contenuti" id='dayarrivo_r'>
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Ora Arrivo
+                        </div>
+                        <div class="col-md-3 contenuti" id='oraarrivo' >
+
+                        </div>
+						  <div class="col-md-3 contenuti" id='oraarrivo_r' >
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Sede Partenza
+                        </div>
+                        <div class="col-md-3 contenuti" id='sedepartenza'>
+
+                        </div>
+						<div class="col-md-3 contenuti" id='sedepartenza_r'>
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Luogo Destinazione
+                        </div>
+                        <div class="col-md-3 contenuti" id='luogodest'>
+
+                        </div>
+						<div class="col-md-3 contenuti" id='luogodest_r'>
+
+                        </div>
+                    </div>
+
+                        <div class='row'>
+                            <div class="col-md-6 titoli" >
+                                Passeggeri
+                            </div>
+                            <div class="col-md-3 contenuti" id='passeggeri'>
+
+                            </div>
+							   <div class="col-md-3 contenuti" id='passeggeri_r'>
+
+                            </div>
+
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Tappe Intermedie Andata
+                        </div>
+                        <div class="col-md-3 contenuti" id='tappeandata'>
+
+                        </div>
+						<div class="col-md-3 contenuti" id='tappeandata_r'>
+
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6 titoli" >
+                            Tappe Intermedie Ritorno
+                        </div>
+                        <div class="col-md-3 contenuti" id='tapperitorno'>
+
+                        </div>
+						    <div class="col-md-3 contenuti" id='tapperitorno_r'>
+
+                        </div>
+                    </div>
+
+
+
+                <div class="clearfix">
+                    <br>
+                </div>
+
+
+                <div class='row'>
+                    <div class="col-md-6 macchina" >
+                        Marca/Modello
+                    </div>
+                    <div class="col-md-3 contenuti" id='marca' >
+
+                    </div>
+					 <div class="col-md-3 contenuti" id='marca_r' >
+
+                    </div>
+                </div>
+
+
+                    <div class='row'>
+                <div class="col-md-6 macchina" >
+                    Alimentazione
+                </div>
+                <div class="col-md-3 contenuti" id='alimentazione' >
+
+                </div>
+				     <div class="col-md-3 contenuti" id='alimentazione_r' >
+
+                </div>
+            </div>
+
+                <div class='row'>
+                    <div class="col-md-6 macchina" >
+                        Targa
+                    </div>
+                    <div class="col-md-3 contenuti" id='targa' >
+
+                    </div>
+					 <div class="col-md-3 contenuti" id='targa_r' >
+
+                    </div>
+                </div>
+
+                <div class='row'>
+                    <div class="col-md-6 macchina" >
+                        Cilindrata
+                    </div>
+                    <div class="col-md-3 contenuti" id='cilindrata' >
+
+                    </div>
+					 <div class="col-md-3 contenuti" id='cilindrata_r' >
+
+                    </div>
+                </div>
+
+			
+              <div class='row'>
+                <div class="col-md-6 stato" >
+                   Motivo Viaggio
+                </div>
+                <div class="col-md-3 contenuti" id='motivo' >
+					
+                </div>
+				  <div class="col-md-3 contenuti" id='motivo_r' >
+					
+                </div>
+            </div>
+
+              <div class='row' hidden>
+                <div class="col-md-6 stato" >
+                    Stato Viaggio
+                </div>
+                <div class="col-md-3 contenuti" id='stato' >
+					
+                </div>
+				  <div class="col-md-3 contenuti"  id='stato_r' >
+					
+                </div>
+            </div>
+        
+
+
+
+                <div class="col-md-12">
+                    <div class="col-md-9">       
+            
+						<input type='text' hidden  id='id_prenotazione'>
+						<input type='text' hidden  id='id_tipologia'>
+						<input type='text' hidden  id='id_viaggio_pianificato'>
+                       
+					<button type="button" class="btn btn-info btn-lg" id='bottoneCancella' data-toggle="modal" data-target="#confermaModal">Cancella Prenotazione</button>
+                    </div>
+           
+                    <div  hidden class="col-md-3">
+                        <div class="bottone_stampa">
+                            <h3 class="floatleft margine_sinistro">Stampa</h3>
+                            <img class="stampa" src="../img/booking/stampa.png">
+                        </div>
+                    </div>
+                </div>
+				<br>
+				<br>
+				<br>
+			  </div>	
+				
+				<ul class="pagination">
+				 
+				</ul>
+                <div class="clearfix">
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Div per finestra modale avanzamento step -->
+<div class="modal fade" id="modalstep" tabindex="-1" role="dialog" aria-labelledby="Prenotazione auto" aria-hidden="true">
+</body>
+
+<script type="text/javascript">
+		App.loadJsFile('../js/prenotazione_riepilogo_agg.js');
+		App.loadJsFile('../js/template_prenotazione.js');
+	</script>
+
+
+
+</html>
