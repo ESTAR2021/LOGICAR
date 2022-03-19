@@ -16,10 +16,7 @@ if (isset($_POST['psw']))
     $psw = $_POST['psw'];
 //---
 $i = 0;
-//---
-//$cf = 'm.falanga2';
-//$psw = '12345678';
-//---
+
 $psw_md5=md5($psw);
 //---
 try 
