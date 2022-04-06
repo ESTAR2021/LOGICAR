@@ -12,6 +12,17 @@ $conn = null;
 session_destroy();
 session_start();
 $cf_sessione=$_POST['cf'];
+//--- verifica token whr
+$uid = $_POST['uid'];
+$time = $_POST['time'];
+$hash = $_POST['hash'];
+$token = json_decode(file_get_contents("token.json"))->token;
+$sha1 = sha1($uid.$time.$token);
+if ($hash != $sha1)
+{
+  die();
+}
+//---
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
