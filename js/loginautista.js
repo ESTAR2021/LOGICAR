@@ -73,41 +73,6 @@ $(document).ready(function()
     });
   });
 	
-  $(document).on('click', '#loginLdapAous', function()
-  {
-    var cf = $("#cf").val();
-    var psw = $("#password").val();
-    //alert("LDAP-AOUS " + cf + " " + psw);
-		$.ajax(
-    {
-      type: "POST",
-      url: "php/loginautista_aous_ldap.php",
-      data: 'cf=' + cf + '&psw=' + psw,
-			success: function(data)
-      {
-        console.log(data);
-        switch (data)
-        {
-          case '1':
-            location.href = 'booking/home.html';
-            break;
-					/*	
-          case '3':
-            location.href = 'booking/cambia_psw.html';
-            break;
-					*/
-          case '2':
-            location.href = 'booking/avvisi_mail.html';
-            break;
-          case '4':
-            location.href = 'booking/registro_chiavi.html';
-            break;
-          default:
-            $('#errore').fadeIn();
-            break;
-        }
-      }
-    });
-  });
+  
 	
 });
